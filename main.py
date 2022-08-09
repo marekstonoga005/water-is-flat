@@ -51,6 +51,7 @@ while a==True:
       a = False
   else:
       time.sleep(0.4)
+print(driver.current_url)
 time.sleep(60)
 os.system("echo "+rawr+" > a.txt")
 os.system("node index.js")
