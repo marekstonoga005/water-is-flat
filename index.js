@@ -119,7 +119,15 @@ fetch("https://api.mail.tm/token", {
             }else{
 
                 if(e.to[0].address==mail){
+                    
                     let impid = e.id
+                    fetch("https://api.mail.tm/messages/"+impid, {
+                                "credentials": "include",
+                                "headers": {
+                                    "Authorization": "Bearer "+token
+                                },
+                                "method": "DELETE",
+                            });
                     fetch("https://api.mail.tm/messages/"+impid, {
                         "credentials": "include",
                         "headers": {
@@ -133,13 +141,7 @@ fetch("https://api.mail.tm/token", {
                                 e = e.replace(" )", "")
                                 fs.writeFile('a.txt', e, function (err,data) {});
                             }
-                            fetch("https://api.mail.tm/messages/"+impid, {
-                                "credentials": "include",
-                                "headers": {
-                                    "Authorization": "Bearer "+token
-                                },
-                                "method": "DELETE",
-                            });
+                            
                         })
                     })})
                 }
