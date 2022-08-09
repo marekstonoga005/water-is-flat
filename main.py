@@ -52,7 +52,7 @@ while a==True:
   else:
       time.sleep(0.4)
 print(driver.current_url)
-time.sleep(60)
+time.sleep(222)
 os.system("echo "+rawr+" > a.txt")
 os.system("node index.js")
 f = open("a.txt", "r")
