@@ -30,11 +30,11 @@ options.add_argument('--user-data-dir=rawr')
 options.add_argument("--remote-debugging-port=38223")
 driver = uc.Chrome(options=options, version_main=103)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
-a = ["forzahorizon5.ml", "forzahorizon5.tk", "forzahorizon5.ga", "forzahorizon5.gq", "forzahorizon5.cf", "unturnedrp.tk", "unturnedrp.ml", "highrp.tk", "highrp.ml", "highrp.ga", "highrp.cf", "highrp.gq", "stolicarp.tk", "stolicarp.ml", "stolicarp.ga", "stolicarp.cf", "stolicarp.gq", "txtl.ml", "txtl.tk", "txtl.ga", "txtl.cf", "txtl.gq"]
+a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruwczakq1", "paruwczakq2", "paruwczakq3"]
 xx = "abcdefghijklkmnopqrstuvwxyz"
 xd = "".join(random.sample(xx, 6))
 xd1 = "".join(random.sample(xx, 6))
-rawr = xd+"@"+random.choice(a)
+rawr = random.choice(a)+"+"+xd+"@gmail.com"
 time.sleep(4)
 driver.switch_to.window(driver.window_handles[0])
 driver.get("https://id.atlassian.com/signup?application=bitbucket&continue=https%3A%2F%2Fbitbucket.org%2Faccount%2Fsignin%2F%3Fnext%3D%252F")
@@ -52,7 +52,7 @@ while a==True:
   else:
       time.sleep(0.4)
 print(driver.current_url)
-time.sleep(222)
+time.sleep(75)
 os.system("echo "+rawr+" > a.txt")
 os.system("node index.js")
 f = open("a.txt", "r")
