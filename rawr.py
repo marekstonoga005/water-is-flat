@@ -31,5 +31,5 @@ options.add_argument("--remote-debugging-port=38223")
 driver = uc.Chrome(options=options, version_main=103)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
 driver.get("https://nordalts.com/news/rawr")
-time.sleep(10000)
+time.sleep(120)
 driver.close()
