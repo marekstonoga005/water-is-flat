@@ -26,7 +26,7 @@ rawr = 0
 a = True
 while(a==True):
   time.sleep(1)
-  if(w.find_element(By.XPATH, '//*[@id="egg"]').text=="invalid id thingy yes (if you think its a mistake contact fisch on discord or smth idk)"):
+  if(driver.find_element(By.XPATH, '//*[@id="egg"]').text=="invalid id thingy yes (if you think its a mistake contact fisch on discord or smth idk)"):
     rawr = rawr+1
     if(rawr==13):
       a = False
