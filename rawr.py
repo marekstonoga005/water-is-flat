@@ -30,7 +30,6 @@ while(a==True):
     rawr = rawr+1
     if(rawr==13):
       a = False
-      driver.close()
     else:
       driver.get("https://nordalts.com/verifytest?"+"".join(random.sample(low_word, 12)))
 driver.close()
