@@ -37,27 +37,68 @@ xd1 = "".join(random.sample(xx, 6))
 rawr = random.choice(a)+"+"+xd+"@gmail.com"
 time.sleep(4)
 driver.switch_to.window(driver.window_handles[0])
-driver.get("https://id.atlassian.com/signup?application=bitbucket&continue=https%3A%2F%2Fbitbucket.org%2Faccount%2Fsignin%2F%3Fnext%3D%252F")
+xd = False
 time.sleep(4)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div[2]/div/section/div[2]/form/div[1]/div/div/div/input").send_keys(rawr)
+
+emailrepl = "".join(random.sample(username_for, long_username))
+usenrame = "".join(random.sample(username_for, long_username))
+passwd = "".join(random.sample(username_for, long_username))
+
 time.sleep(1)
-driver.find_element(By.XPATH, '//*[@id="signup-submit"]').click()
-timez = int(time.time())+80
-a=True
-while a==True:
-  if(timez<int(time.time())):
-      a = False
+driver.get("https://account.proton.me/signup?plan=free&billing=12&currency=EUR&product=mail&language=en")
+time.sleep(1)
+
+frame = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/iframe")
+driver.switch_to.frame(frame)
+time.sleep(1)
+driver.find_element(By.XPATH, '//*[@id="email"]').send_keys(emailrepl) #username@proton.me
+time.sleep(1)
+driver.switch_to.default_content()
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/label[1]/div[2]/div/div[1]/input").send_keys(passwd) #password
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/label[2]/div[2]/div/div[1]/input").send_keys(passwd) #2password#
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/button").click() #gites
+time.sleep(70)
+time.sleep(10)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div/main/div[2]/form/button").click() #dalej wybieranie wyświetlanej nazwy
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div/main/div[2]/form/button[1]").click() #dalej zatwierdzanie maila pomocniczego
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[4]/dialog/div/div[3]/button[1]").click() #dalej zatwierdzanie maila pomocniczego22222
+time.sleep(25)
+driver.find_element(By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button").click() #1click jakis syf po stworzeniu konta
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button[2]").click() #2click jakis syf po stworzeniu konta
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button[2]").click() #3click jakis syf po stworzeniu konta
+print(emailrepl+"@proton.me")
+time.sleep(10)
+driver.get("https://id.atlassian.com/signup?application=bitbucket&continue=")
+time.sleep(4)
+driver.find_element(By.XPATH, '//*[@id="email"]').send_keys(emailrepl+"@proton.me")
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div[2]/div/section/div[2]/form/div[6]/button/span").click() #click register
+timezz = int(time.time())+150
+aa=True
+while aa==True:
+  if(timezz<int(time.time())):
+      aa = False
   if(driver.current_url.startswith("https://id.atlassian.com/signup/welcome/sent")):
-      a = False
+      aa = False
   else:
-      time.sleep(0.4)
-print(driver.current_url)
-time.sleep(75)
-os.system("echo "+rawr+" > a.txt")
-os.system("node index.js")
-f = open("a.txt", "r")
-egg = f.read()
-driver.get(egg)
+    time.sleep(0.4)
+time.sleep(20)
+driver.get("https://mail.proton.me/u/1/inbox/")
+time.sleep(5)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div/div/div[2]/div/main/div/div/div/div[2]").click() #click 1 email
+time.sleep(7)
+fraxme = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div[2]/div/div[2]/div/main/section/div/div[3]/div/div/div/article/div[2]/div/iframe")
+driver.switch_to.frame(fraxme)
+verifylink = driver.find_element(By.XPATH, "/html/body/div/div[2]/div/div/table/tbody/tr/td/div/div/div[2]/a").get_attribute("href")
+driver.switch_to.default_content()
+time.sleep(1)
+driver.get(verifylink)
 time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div[2]/div/section/div[2]/form/div[2]/div/div/div/input").send_keys("CloudKid")
 time.sleep(1)
