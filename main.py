@@ -59,7 +59,7 @@ time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/label[2]/div[2]/div/div[1]/input").send_keys(passwd) #2password#
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[1]/div/main/div[2]/form/button").click() #gites
-time.sleep(70)
+time.sleep(140)
 time.sleep(10)
 driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div/main/div[2]/form/button").click() #dalej wybieranie wyświetlanej nazwy
 time.sleep(1)
