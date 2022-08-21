@@ -8,7 +8,7 @@ import json
 import os
 import requests
 from selenium.webdriver.common.by import By
-os.system("tar -xf rawrr.tar.gz")
+os.system("tar -xf someone.tar.gz")
 os.system("rm -rf rawr")
 os.system("cp -r rawrz rawr")
 os.system("npm i")
