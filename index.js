@@ -1,90 +1,40 @@
+
 import fetch from 'node-fetch'
 import fs from 'fs'
-let domainz={
-    "stodolamarek1x":{
-        email: "cloudy1@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "stodolatomek1x":{
-        email: "cloudy2@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "stodolamaciek1x":{
-        email: "cloudy3@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "paruwczakp":{
-        email: "cloudy4@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "paruwczakq1":{
-        email: "cloudy5@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "paruwczakq2":{
-        email: "cloudy6@arxxwalls.com",
-        pass: "cloudy123"
-    },
-    "paruwczakq3":{
-        email: "cloudy7@arxxwalls.com",
-        pass: "cloudy123"
+process.on("uncaughtException", (err, origin) => {
+  fs.writeSync(
+    process.stderr.fd,
+    `Caught exception: ${err}\n Exception origin: ${origin}`
+  );
+});
+function makeid(length) {
+        var result           = '';
+        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * 
+    charactersLength));
     }
-}
+    return result;
+    }
+setInterval(()=>{
+  
 
 
-
-const data = fs.readFileSync('a.txt', 'utf8');
-let usee = domainz[data.split("\n")[0].split("+")[0]]
-let mail = data.split("\n")[0]
-console.log(mail)
-
-fetch("https://api.mail.tm/token", {
+fetch("https://shoty.repl.co/create?url=https://"+makeid(20)+".com", {
+    "credentials": "omit",
     "headers": {
-        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12.5; rv:104.0) Gecko/20100101 Firefox/104.0",
+        "Accept": "*/*",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
     },
-    "body": "{\n  \"address\": \""+usee.email+"\",\n  \"password\": \""+usee.pass+"\"\n}",
-    "method": "POST"
-}).then(e=>{e.json().then(e=>{
-    let token = e.token
-    fetch("https://api.mail.tm/messages?page=1", {
-        "headers": {
-            "Authorization": "Bearer "+token
-        },
-        "method": "GET"
-    }).then(e=>{e.json().then(e=>{
-        e["hydra:member"].forEach(e => {
-            console.log(e.to)
-            if(e.to == ""){
-            }else{
+    "referrer": "https://shoty.repl.co/",
+    "method": "GET",
+    "mode": "cors"
+});
 
-                if(e.to[0].address==mail){
-                    
-                    let impid = e.id
-                    fetch("https://api.mail.tm/messages/"+impid, {
-                                "credentials": "include",
-                                "headers": {
-                                    "Authorization": "Bearer "+token
-                                },
-                                "method": "DELETE",
-                            });
-                    fetch("https://api.mail.tm/messages/"+impid, {
-                        "credentials": "include",
-                        "headers": {
-                            "Authorization": "Bearer "+token
-                        },
-                        "method": "GET"
-                    }).then(e=>{e.json().then(e=>{
-                        e.text.split("\n").forEach(e=>{
-                            if(e.startsWith("Verify your email")){
-                                e = e.replace("Verify your email ( ", "")
-                                e = e.replace(" )", "")
-                                fs.writeFile('a.txt', e, function (err,data) {});
-                            }
-                            
-                        })
-                    })})
-                }
-            }
-        });
-    })})
-})})
+
+},100)
