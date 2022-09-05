@@ -1,0 +1,287 @@
+name: RAWR
+
+on:
+  workflow_dispatch:
+  
+  
+jobs:
+  czgvokfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvoksfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvofkfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvorkfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokqfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvowkfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvoeekfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokrrfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokttfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvyyokfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokfuuqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvoiikfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvoookfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvozzkfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokfasqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvodskfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokffdqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvrrdokfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvozzxkfqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
+  czgvokfxdqstri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+      - name: main
+        run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          npm i
+          node index.js
