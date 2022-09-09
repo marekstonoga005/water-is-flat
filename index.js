@@ -18,7 +18,7 @@ function makeid(length) {
     return result;
     }
 
-let vvz = makeid(100000000)
+let vvz = makeid(10000000)
 setInterval(()=>{
   
 
