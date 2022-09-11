@@ -45,5 +45,5 @@ fetch("https://theddosgame.com/", {
   })
 })
   
-}, 3)
+}, 1)
 
