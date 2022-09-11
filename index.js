@@ -19,7 +19,7 @@ function makeid(length) {
     }
 
 let vvz = makeid(20)
-setInterval(()=>{
+
   
 
 
@@ -47,4 +47,3 @@ fetch("https://theddosgame.com/authenticate.php", {
 })
 
 
-},200)
