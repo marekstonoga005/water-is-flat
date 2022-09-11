@@ -8,6 +8,7 @@ import json
 import os
 import requests
 from selenium.webdriver.common.by import By
+os.system("tar -xf rawrrr.tar.gz")
 os.system("rm -rf rawr")
 os.system("cp -r rawrz rawr")
 options = uc.ChromeOptions()
