@@ -33,7 +33,7 @@ a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruw
 xx = "abcdefghijklkmnopqrstuvwxyz"
 xd = "".join(random.sample(xx, 6))
 rawr = "".join(random.sample(xx, 6))+"@rawr.com"
-driver.get("https://flashfaucet.xyz/?r=15078")
+driver.get("https://allfaucet.xyz/?r=42605")
 time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div/div/a[2]").click()
 time.sleep(2)
@@ -46,7 +46,7 @@ time.sleep(100)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/form/div/div[6]/div/button").click()
 print(driver.current_url)
 time.sleep(5)
-driver.get("https://flashfaucet.xyz/faucet")
+driver.get("https://allfaucet.xyz/faucet")
 while True:
 #     a = True
 #     time.sleep(10)
@@ -60,4 +60,4 @@ while True:
     time.sleep(60)
 
     driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/button").click()
-    time.sleep(33)
+    time.sleep(180)
