@@ -57,7 +57,7 @@ while True:
 #             a = False
 #     driver.switch_to.default_content()
 
-    time.slep(60)
+    time.sleep(60)
 
     driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/button").click()
     time.sleep(33)
