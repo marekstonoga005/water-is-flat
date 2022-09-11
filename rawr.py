@@ -48,16 +48,16 @@ print(driver.current_url)
 time.sleep(5)
 driver.get("https://flashfaucet.xyz/faucet")
 while True:
-    a = True
-    time.sleep(10)
-    iframe = driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/center/div[2]/div/div/div/iframe")
-    driver.switch_to.frame(iframe)
-    while a == True:
-        if "recaptcha-checkbox-checked" in driver.find_element(By.XPATH, '//*[@id="recaptcha-anchor"]').get_attribute("class"):
-            a = False
-    driver.switch_to.default_content()
+#     a = True
+#     time.sleep(10)
+#     iframe = driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/center/div[2]/div/div/div/iframe")
+#     driver.switch_to.frame(iframe)
+#     while a == True:
+#         if "recaptcha-checkbox-checked" in driver.find_element(By.XPATH, '//*[@id="recaptcha-anchor"]').get_attribute("class"):
+#             a = False
+#     driver.switch_to.default_content()
 
-#     time.sleep(60)
+    time.sleep(60)
 
     driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/button").click()
     time.sleep(33)
