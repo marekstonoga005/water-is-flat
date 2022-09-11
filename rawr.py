@@ -43,6 +43,7 @@ time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/form/div/div[3]/input").send_keys(xd)
 time.sleep(60)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/form/div/div[6]/div/button").click()
+print(driver.current_url)
 time.sleep(5)
 driver.get("https://flashfaucet.xyz/faucet")
 while True:
