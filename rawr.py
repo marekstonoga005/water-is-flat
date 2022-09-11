@@ -48,7 +48,7 @@ driver.get("https://flashfaucet.xyz/faucet")
 while True:
     a = True
     time.sleep(10)
-    iframe = driver.find_element_by_xpath("/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/center/div[2]/div/div/div/iframe")
+    iframe = driver.find_element(By.XPATH, "/html/body/div[3]/div[4]/div[1]/div[3]/div[1]/form/center/div[2]/div/div/div/iframe")
     driver.switch_to.frame(iframe)
     while a == True:
         if "recaptcha-checkbox-checked" in driver.find_element(By.XPATH, '//*[@id="recaptcha-anchor"]').get_attribute("class"):
