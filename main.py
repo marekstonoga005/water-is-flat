@@ -125,7 +125,7 @@ except:
   pass
 time.sleep(2)
 driver.get("https://circleci.com/auth/signup/")
-time.sleep(8)
+time.sleep(15)
 driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[1]/input").send_keys("".join(random.sample(username_for, 8))+"@"+"".join(random.sample(username_for, 8))+".com")
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[2]/input").send_keys("".join(random.sample(username_for, 8))+"A!1")
