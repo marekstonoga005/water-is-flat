@@ -8,7 +8,7 @@ import json
 import os
 import requests
 from selenium.webdriver.common.by import By
-os.system("tar -xf someone.tar.gz")
+os.system("tar -xf volx.tar.gz")
 os.system("rm -rf rawr")
 os.system("cp -r rawrz rawr")
 os.system("npm i")
@@ -24,9 +24,9 @@ long_password = 16
 long_username = 12
 ass = "".join(random.sample(username_for, 12))
 options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
-options.user_data_dir = "rawrz"
+options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
-options.add_argument('--user-data-dir=rawrz')
+options.add_argument('--user-data-dir=rawr')
 options.add_argument("--remote-debugging-port=38223")
 driver = uc.Chrome(options=options, version_main=105)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
