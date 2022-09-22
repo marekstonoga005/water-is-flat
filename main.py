@@ -54,7 +54,7 @@ driver.find_element(By.XPATH, "/html/body/main/div[3]/div/div[2]/div[5]/div/div/
 time.sleep(4)
 driver.find_element(By.XPATH, '//*[@id="email"]').send_keys(emilyez)
 time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div[2]/div/section/div[2]/form/div[6]/button/span").click() #click register
+driver.find_element(By.XPATH, '//*[@id="signup-submit"]').click() #click register
 timezz = int(time.time())+150
 aa=True
 while aa==True:
@@ -126,7 +126,7 @@ except:
 time.sleep(2)
 driver.get("https://circleci.com/auth/signup/")
 time.sleep(15)
-driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[1]/input").send_keys("".join(random.sample(username_for, 8))+"@"+"".join(random.sample(username_for, 8))+".com")
+driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[1]/input").send_keys("".join(random.sample(username_for, 23))+"@gmail.com")
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[2]/input").send_keys("".join(random.sample(username_for, 8))+"A!1")
 time.sleep(1)
