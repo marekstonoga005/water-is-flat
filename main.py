@@ -8,6 +8,7 @@ import json
 import os
 import requests
 from selenium.webdriver.common.by import By
+xxxtime = int(time.time())+900
 def rawrzzzz():
   try:
     os.system("rm -rf rawrz")
@@ -175,5 +176,7 @@ def rawrzzzz():
     time.sleep(33)
   except:
     pass
+    if(xxxtime<int(time.time())):
+      quit()
     rawrzzzz()
 rawrzzzz()
