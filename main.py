@@ -174,7 +174,8 @@ def rawrzzzz():
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[1]/button").click()
     time.sleep(33)
-  except:
+  except as rawrzxx:
+    print(rawrzxx)
     pass
     if(xxxtime<int(time.time())):
       quit()
