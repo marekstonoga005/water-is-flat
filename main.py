@@ -34,7 +34,7 @@ def rawrzzzz():
     options.add_argument("--remote-debugging-port=38223")
     driver = uc.Chrome(options=options, version_main=105)  # version_main allows to specify your chrome version instead of following chrome global version
     driver.set_window_size(1920, 1080)
-    a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruwczakq1", "paruwczakq2", "paruwczakq3", "janusz.mostowiak2137"]
+    a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruwczakq1", "paruwczakq2", "paruwczakq3", "janusz.mostowiak2137", "adasdrzewicx"]
     xx = "abcdefghijklkmnopqrstuvwxyz"
     xdz = "".join(random.sample(xx, 6))
     xd1 = "".join(random.sample(xx, 6))
