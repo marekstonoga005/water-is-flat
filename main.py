@@ -15,7 +15,7 @@ def rawrzzzz():
     os.system("tar -xf volx.tar.gz")
     os.system("rm -rf rawr")
     os.system("cp -r rawrz rawr")
-    os.system("npm i")
+    # os.system("npm i")
     options = uc.ChromeOptions()
     a = True
     low_word = "abcdefghijklkmnopqrstuvwxyz"
@@ -40,15 +40,38 @@ def rawrzzzz():
     xd1 = "".join(random.sample(xx, 6))
     rawr = random.choice(a)+"+"+xdz+"@gmail.com"
     time.sleep(4)
-    driver.switch_to.window(driver.window_handles[0])
+    #driver.switch_to.window(driver.window_handles[0])
     xd = False
     time.sleep(4)
 
     emailrepl = "".join(random.sample(username_for, 8))
     usenrame = "".join(random.sample(username_for, long_username))
     passwd = "".join(random.sample(username_for, long_username))
-    emilyez = random.choice(a)+"+"+emailrepl+"@gmail.com"
+    #emilyez = random.choice(a)+"+"+emailrepl+"@gmail.com"
+
+
+    driver.execute_script('''window.open("http://bings.com","_blank");''')
+    driver.switch_to.window(driver.window_handles[1])
+    time.sleep(0.5)
+    driver.get("https://www.emailnator.com/")
+    time.sleep(6)
+    try:
+      driver.find_element(By.XPATH, '//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]').click()
+    except:
+      pass
+    time.sleep(0.5)
+    try:
+      driver.find_element(By.XPATH, '//*[@id="close-btn-ann"]').click()
+    except:
+      pass
+    time.sleep(1.5)
+    driver.find_element(By.XPATH, '//*[@id="custom-switch-domain"]').click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[5]/div/button').click()
+    time.sleep(2)
+    emilyez = driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[1]/input').get_attribute("value")
     time.sleep(1)
+    driver.switch_to.window(driver.window_handles[0])
     # random.choice(a)+"+"+emailrepl+"@gmail.com"
     print(emilyez)
     time.sleep(2)
@@ -70,11 +93,16 @@ def rawrzzzz():
         time.sleep(0.4)
     time.sleep(20)
 
-    os.system("echo 'gmel|"+emilyez+"' > a.txt")
-    os.system("node index.js")
-    f = open("a.txt", "r")
-    verifylink = f.read()
-
+    driver.switch_to.window(driver.window_handles[1])
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[3]/button").click()
+    time.sleep(6)
+    linkz = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div[2]/div[2]/div/table/tbody/tr[2]/td/a").get_attribute("href")
+    time.sleep(0.5)
+    driver.get(linkz)
+    time.sleep(7)
+    verifylink = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div/div[2]/div/div/table/tbody/tr/td/div/div/div[2]/a").get_attribute("href")
+    driver.switch_to.window(driver.window_handles[0])
     time.sleep(1)
     driver.get(verifylink)
     time.sleep(2)
