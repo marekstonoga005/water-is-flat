@@ -11,10 +11,6 @@ from selenium.webdriver.common.by import By
 xxxtime = int(time.time())+900
 def rawrzzzz():
   try:
-    os.system("rm -rf rawrz")
-    os.system("tar -xf volx.tar.gz")
-    os.system("rm -rf rawr1")
-    os.system("cp -r rawrz rawr1")
     # os.system("npm i")
     options = uc.ChromeOptions()
     a = True
