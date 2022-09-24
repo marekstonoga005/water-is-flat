@@ -11,10 +11,7 @@ from selenium.webdriver.common.by import By
 xxxtime = int(time.time())+900
 def rawrzzzz():
   try:
-    os.system("rm -rf rawrz")
-    os.system("tar -xf volx.tar.gz")
-    os.system("rm -rf rawr1")
-    os.system("cp -r rawrz rawr1")
+
     # os.system("npm i")
     options = uc.ChromeOptions()
     a = True
@@ -28,9 +25,9 @@ def rawrzzzz():
     long_username = 12
     ass = "".join(random.sample(username_for, 12))
     options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
-    options.user_data_dir = "rawr1"
+    options.user_data_dir = "rawr3"
     options.add_argument("--window-size=1920,1080")
-    options.add_argument('--user-data-dir=rawr1')
+    options.add_argument('--user-data-dir=rawr3')
     options.add_argument("--remote-debugging-port=38223")
     driver = uc.Chrome(options=options, version_main=105)  # version_main allows to specify your chrome version instead of following chrome global version
     driver.set_window_size(1920, 1080)
