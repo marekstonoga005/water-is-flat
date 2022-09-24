@@ -207,6 +207,7 @@ def rawrzzzz():
     time.sleep(23)
   except Exception as rawrzxx:
     print(rawrzxx)
+    driver.exit()
     pass
     if(xxxtime<int(time.time())):
       quit()
