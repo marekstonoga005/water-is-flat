@@ -136,6 +136,7 @@ def rawrzzzz():
     time.sleep(1.5)
     driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div[2]/div[5]/a/span/span/span").click()
     time.sleep(2)
+    print(driver.current_url)
     driver.get("https://bitbucket.org/repo/import")
     time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[2]/div/section/div/form/div[1]/input").send_keys("https://bitbucket.org/ijdvcexokkbc/hdgxzk/src/master/")
@@ -201,7 +202,9 @@ def rawrzzzz():
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/section[3]/div/div[2]/button[1]/div[2]/div[2]/input").send_keys("master")
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[1]/button").click()
-    time.sleep(33)
+    time.sleep(10)
+    print(driver.current_url)
+    time.sleep(23)
   except Exception as rawrzxx:
     print(rawrzxx)
     pass
