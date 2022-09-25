@@ -67,9 +67,12 @@ def rawrzzzz():
     time.sleep(1.5)
     driver.find_element(By.XPATH, '//*[@id="custom-switch-domain"]').click()
     time.sleep(0.5)
+    driver.find_element(By.XPATH, '//*[@id="custom-switch-dotGmail"]').click()
+    time.sleep(0.5)
     driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[5]/div/button').click()
     time.sleep(2)
     emilyez = driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[1]/input').get_attribute("value")
+    emilyez = emilyez.split("+")[0]+"+"+"".join(random.sample(low_word, 13))+"@gmail.com"
     time.sleep(1)
     driver.switch_to.window(driver.window_handles[0])
     # random.choice(a)+"+"+emailrepl+"@gmail.com"
@@ -95,7 +98,8 @@ def rawrzzzz():
 
     driver.switch_to.window(driver.window_handles[1])
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[3]/button").click()
+    driver.get("https://www.emailnator.com/inbox/"+emilyez)
+    # driver.find_element(By.XPATH, "/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[3]/button").click()
     time.sleep(6)
     linkz = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div[2]/div[2]/div/table/tbody/tr[2]/td/a").get_attribute("href")
     time.sleep(0.5)
