@@ -169,7 +169,7 @@ def rawrzzzz():
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div/signup/div/form/div[5]/button").click()
     time.sleep(20)
-
+    print(driver.current_url)
 
     driver.switch_to.window(driver.window_handles[1])
     time.sleep(2)
