@@ -11,10 +11,10 @@ import requests
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 a = False
-#os.system("rm -rf rawrz")
-#os.system("tar -xf volx.tar.gz")
-#os.system("rm -rf rawr")
-#os.system("cp -r rawrz rawr")
+os.system("rm -rf rawrz")
+os.system("tar -xf volx.tar.gz")
+os.system("rm -rf rawr")
+os.system("cp -r rawrz rawr")
 low_word = "abcdefghijklkmnopqrstuvwxyz"
 upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
 number = "1234567890"
@@ -24,10 +24,13 @@ password_for = low_word + upper_word + number + symbols
 long_password = 16
 long_username = 12
 ass = "".join(random.sample(username_for, 12))
-
-chrome_options = Options()
-chrome_options.add_extension('./rawr.crx')
-driver = webdriver.Chrome(options=chrome_options)
+options = uc.ChromeOptions()
+options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
+options.user_data_dir = "rawr"
+options.add_argument("--window-size=1920,1080")
+options.add_argument('--user-data-dir=rawr')
+options.add_argument("--remote-debugging-port=38223")
+driver = uc.Chrome(options=options, version_main=105)
 
 driver.set_window_size(1920, 1080)
 passwd = "".join(random.sample(low_word, 12))+"H!1"
