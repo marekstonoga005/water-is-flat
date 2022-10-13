@@ -129,7 +129,7 @@ print("a10")
 driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div[2]/div/div/div[1]/div[1]/div/div/div[1]/div[2]/div/button").click()
 time.sleep(10)
 driver.get(driver.current_url)
-time.sleep(600)
+time.sleep(300)
 
 
 
