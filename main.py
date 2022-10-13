@@ -8,7 +8,6 @@ import random
 import json
 import os
 import requests
-import pyautogui
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 a = False
