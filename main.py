@@ -32,19 +32,23 @@ passwd = "".join(random.sample(low_word, 12))+"H!1"
 
 
 
-driver.get("https://app.datacamp.com/workspace")
+driver.get("https://www.datacamp.com/")
 
 driver.set_window_size(1920, 1080)
 
 
 
-time.sleep(8)
-driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/main/div[2]/div/form/fieldset[1]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"@cldkid.com")
+time.sleep(12)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/fieldset[1]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"@cldkid.com")
 time.sleep(0.5)
-driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/main/div[2]/div/form/fieldset[2]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"Ah!1")
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/fieldset[2]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"Ah!1")
 time.sleep(0.5)
-driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/main/div[2]/div/form/button").click()
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/button").click()
 time.sleep(7)
+driver.get("https://app.datacamp.com/workspace")
+
+
+
 driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/div/div/a").click()
 time.sleep(4)
 driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
