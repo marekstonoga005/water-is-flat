@@ -159,6 +159,5 @@ if __name__ == "__main__":
     time.sleep(3)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
-    driver.get("https://app.datacamp.com/workspace/overview")
 
 
