@@ -1,4 +1,4 @@
-name: fake
+name: x
 
 on:
   workflow_dispatch:
@@ -6,6 +6,996 @@ on:
   
 jobs:
   czgvokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoksfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvofkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvorkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokqfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvowkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoeekfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokrrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokttfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvyyokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfuuqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoiikfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoookfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozzkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfasqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodskfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokffdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvrrdokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozzxkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfxdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfsqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokrrsfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvttofkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoqwrkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoqwwkqfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvowqqwkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgwwqvoeekfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvowqwkrrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokttfersqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvyyczxokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokdffuuqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoiaaikfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvossookfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozddzkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfasffqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodskggfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokhhffdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvrrjjdokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozkkzxkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvollkfxdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokzzfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoksxxfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvofkfccqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvorkfqvvstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokbbqfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvowkfnnqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoemmekfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokrrzzzfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokxxxttfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvyycccokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvvvvokfuuqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvobbbiikfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoookfnnnqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvommmmzzkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvqqqokfasqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodwwwskfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfeeefdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvrrrrrdokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoztttzxkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoyyykfxdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokuuufqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgviiioksfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoooofkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvppporkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokqfqaaastri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgsssvowkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoessdekfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoddskrrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodddkttfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvyyfffokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokgggfuuqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoihhhikfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvooojjjkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokkkzzkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfaslllqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodaaaaskfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvsssssokffdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvrrddddddddddokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozzcockxkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvorawrkfxdqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfzxcqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoasdcxcksfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvgfhvcbofkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodhgvcrkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokqwrfdqfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  crawrzgvowkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czrawrgvoeekfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokrrawrrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokttrrawrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  rawrrawrawrawr:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvorawrrawrkfuuqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvorawrrwariikfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvoookrawrrwarfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozrawrrwarrwrazkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfasrawrrwaqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvodskrawrfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokffdrwarqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvrrdorawrrkfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvozzxkfqdfgsdfstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
+  czgvokfdfgjoxdqstri:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
