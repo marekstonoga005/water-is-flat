@@ -47,23 +47,23 @@ if __name__ == "__main__":
     time.sleep(7)
     driver.get("https://app.datacamp.com/workspace")
 
-
+    time.sleep(3)
 
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/div/div/a").click()
     time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
     time.sleep(0.5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(1)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(8)
@@ -72,20 +72,20 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
     driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(2)
+    time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
     time.sleep(0.5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(1)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(8)
@@ -94,20 +94,20 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
     driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(2)
+    time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
     time.sleep(0.5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(1)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(8)
@@ -116,20 +116,20 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
     driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(2)
+    time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
     time.sleep(0.5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(1)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(8)
@@ -138,20 +138,20 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
     driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(2)
+    time.sleep(4)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
     time.sleep(0.5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(1)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
     except:
         pass
     time.sleep(8)
@@ -159,4 +159,6 @@ if __name__ == "__main__":
     time.sleep(3)
     driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
     time.sleep(8)
+    driver.get("https://app.datacamp.com/workspace/overview")
+
 
