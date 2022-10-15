@@ -1,0 +1,17 @@
+name: fake
+
+on:
+  workflow_dispatch:
+  
+  
+jobs:
+  czgvokfqstri:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip3 install undetected-chromedriver
+      - name: main
+        run: |
+          python3 main.py
