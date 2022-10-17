@@ -5,16 +5,30 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import random
-os.system("tar -xf borky.tar.gz")
 print("aaa")
 time.sleep(5)
+os.system("rm -rf rawrz")
+os.system("tar -xf volx.tar.gz")
+os.system("rm -rf rawr")
+os.system("cp -r rawrz rawr")
+# os.system("npm i")
 options = uc.ChromeOptions()
+a = True
+low_word = "abcdefghijklkmnopqrstuvwxyz"
+upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
+number = "1234567890"
+symbols = "!@#$%&*"
+username_for = low_word
+password_for = low_word + upper_word + number + symbols
+long_password = 16
+long_username = 12
+ass = "".join(random.sample(username_for, 12))
 options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
-options.user_data_dir = "fuck"
+options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
-options.add_argument('--user-data-dir=fuck')
+options.add_argument('--user-data-dir=rawr')
 options.add_argument("--remote-debugging-port=38223")
-driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
+driver = uc.Chrome(options=options, version_main=105)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
 low_word = "abcdefghijklkmnopqrstuvwxyz"
 driver.execute_script('''window.open("http://bings.com","_blank");''')
