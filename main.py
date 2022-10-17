@@ -6,6 +6,8 @@ if __name__ == "__main__":
     from selenium.webdriver.common.action_chains import ActionChains
     import random
     os.system("tar -xf fuck.tar.gz")
+    print("aaa")
+    time.sleep(5)
     options = uc.ChromeOptions()
     options.user_data_dir = os.getcwd()+"/fuck"
     driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
