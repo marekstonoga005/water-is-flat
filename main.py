@@ -46,7 +46,6 @@ if __name__ == "__main__":
     time.sleep(0.5)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div[2]/button").click()
     time.sleep(2)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/button[2]").click()
     time.sleep(2)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div/div/div/div/input").send_keys("".join(random.sample(low_word, 6)))
     time.sleep(0.5)
