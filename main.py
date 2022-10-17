@@ -4,26 +4,14 @@ if __name__ == "__main__":
     from selenium.webdriver.common.by import By
     from selenium.webdriver.common.action_chains import ActionChains
     import random
+    import os
+    os.system("npm i")
     options = uc.ChromeOptions()
     driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
     driver.set_window_size(1920, 1080)
     low_word = "abcdefghijklkmnopqrstuvwxyz"
-    driver.execute_script('''window.open("http://bings.com","_blank");''')
-    driver.switch_to.window(driver.window_handles[1])
-    time.sleep(1)
-    driver.get("https://mail.tm/")
-    time.sleep(5)
-    try:
-        driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/button[3]').click()
-    except:
-        pass
-    time.sleep(1)
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[2]/div[5]/button').click()
-    time.sleep(6)
-    emil = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[1]/div/div/input').get_attribute("value")
-    print(emil)
-    driver.switch_to.window(driver.window_handles[0])
-
+    a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruwczakq1", "paruwczakq2", "paruwczakq3", "janusz.mostowiak2137", "adasdrzewicx"]
+    emil = random.choice(a)+"+"+emailrepl+"@gmail.com"
     driver.get("https://deepnote.com/sign-up")
     time.sleep(1)
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/button[3]').click()
@@ -31,18 +19,18 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/div/div/div/input').send_keys(emil)
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
-    time.sleep(20)
-    driver.switch_to.window(driver.window_handles[1])
-    driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/main/div/div[2]/ul/li/a").get_attribute("href"))
-    time.sleep(3)
-    iframe = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
-    driver.switch_to.frame(iframe)
-    time.sleep(1)
-    linkz = driver.find_element(By.XPATH, "/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
-    driver.switch_to.default_content()
-    driver.switch_to.window(driver.window_handles[0])
+    time.sleep(60)
+    
+    os.system("echo 'gmel|"+emil+"' > a.txt")
+    os.system("node index.js")
+    f = open("a.txt", "r")
+    verifylink = f.read()
+    print(verifylink)
+    
+    
+    
     time.sleep(0.5)
-    driver.get(linkz)
+    driver.get(verifylink)
     time.sleep(3)
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[1]/input[1]').send_keys("".join(random.sample(low_word, 6)))
     time.sleep(0.5)
