@@ -11,6 +11,7 @@ if __name__ == "__main__":
     driver.set_window_size(1920, 1080)
     low_word = "abcdefghijklkmnopqrstuvwxyz"
     a = ["stodolamarek1x", "stodolatomek1x", "stodolamaciek1x", "paruwczakp", "paruwczakq1", "paruwczakq2", "paruwczakq3", "janusz.mostowiak2137", "adasdrzewicx"]
+    emailrepl = "".join(random.sample(low_word, 8))
     emil = random.choice(a)+"+"+emailrepl+"@gmail.com"
     driver.get("https://deepnote.com/sign-up")
     time.sleep(1)
