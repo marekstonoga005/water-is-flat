@@ -20,7 +20,7 @@ if __name__ == "__main__":
     time.sleep(1)
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[2]/div[5]/button').click()
     time.sleep(6)
-    emil = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div/input').get_attribute("value")
+    emil = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[1]/div/div/input').get_attribute("value")
     print(emil)
     driver.switch_to.window(driver.window_handles[0])
 
