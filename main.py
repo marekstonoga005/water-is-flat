@@ -21,8 +21,9 @@ if __name__ == "__main__":
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
     time.sleep(60)
-    
-    os.system("echo 'gmel|"+emil+"' > a.txt")
+    fx = open("a.txt", "w")
+    fx.write('gmel|"+emil+"')
+    fx.close()
     os.system("node index.js")
     f = open("a.txt", "r")
     verifylink = f.read()
