@@ -78,6 +78,8 @@ fetch("https://api.mail.tm/token", {
                         },
                         "method": "GET"
                     }).then(e=>{e.json().then(e=>{
+                        console.log(e.text.split("\n")[11].replace("|  [Sign in now](", "")+e.text.split("\n")[12]+e.text.split("\n")[13].replace(")", ""))
+                        fs.writeFile('a.txt', e.text.split("\n")[11].replace("|  [Sign in now](", "")+e.text.split("\n")[12]+e.text.split("\n")[13].replace(")", "").replaceAll(" ", ""), function (err,data) {});
                         fetch("https://api.mail.tm/messages/"+impid, {
                             "credentials": "include",
                             "headers": {
@@ -85,14 +87,14 @@ fetch("https://api.mail.tm/token", {
                             },
                             "method": "DELETE",
                         });
-                        e.text.split("\n").forEach(e=>{
-                            if(e.startsWith("Verify your email")){
-                                e = e.replace("Verify your email ( ", "")
-                                e = e.replace(" )", "")
-                                fs.writeFile('a.txt', e, function (err,data) {});
-                            }
+                        // e.text.split("\n").forEach(e=>{
+                        //     if(e.startsWith("Verify your email")){
+                        //         e = e.replace("Verify your email ( ", "")
+                        //         e = e.replace(" )", "")
+                        //         fs.writeFile('a.txt', e, function (err,data) {});
+                        //     }
                             
-                        })
+                        // })
                     })})
                 }
             }
