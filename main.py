@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import random
-os.system("tar -xf fuck2.tar.gz")
+os.system("tar -xf borky.tar.gz")
 print("aaa")
 time.sleep(5)
 options = uc.ChromeOptions()
