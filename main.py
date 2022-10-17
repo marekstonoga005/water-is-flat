@@ -28,7 +28,7 @@ options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 options.add_argument("--remote-debugging-port=38223")
-driver = uc.Chrome(options=options, version_main=105)  # version_main allows to specify your chrome version instead of following chrome global version
+driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
 low_word = "abcdefghijklkmnopqrstuvwxyz"
 driver.execute_script('''window.open("http://bings.com","_blank");''')
@@ -65,7 +65,7 @@ time.sleep(2)
 driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/div/div/div/input').send_keys(emil)
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
-time.sleep(40)
+time.sleep(90)
 
 
 driver.switch_to.window(driver.window_handles[1])
