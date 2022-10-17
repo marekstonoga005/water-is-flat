@@ -35,7 +35,7 @@ if __name__ == "__main__":
     driver.switch_to.window(driver.window_handles[1])
     driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/main/div/div[2]/ul/li/a").get_attribute("href"))
     time.sleep(3)
-    iframe = driver.find_element_by_xpath("/html/body/div[1]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
+    iframe = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
     driver.switch_to.frame(iframe)
     time.sleep(1)
     linkz = driver.find_element(By.XPATH, "/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
