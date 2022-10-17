@@ -22,7 +22,7 @@ if __name__ == "__main__":
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
     time.sleep(60)
     fx = open("a.txt", "w")
-    fx.write('gmel|"+emil+"')
+    fx.write('gmel|'+emil)
     fx.close()
     os.system("node index.js")
     f = open("a.txt", "r")
