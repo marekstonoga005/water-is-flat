@@ -5,12 +5,12 @@ if __name__ == "__main__":
     from selenium.webdriver.common.by import By
     from selenium.webdriver.common.action_chains import ActionChains
     import random
+    os.system("tar -xf fuck.tar.gz")
     options = uc.ChromeOptions()
     options.user_data_dir = os.getcwd()+"/fuck"
     driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
     driver.set_window_size(1920, 1080)
     low_word = "abcdefghijklkmnopqrstuvwxyz"
-    input("x")
     driver.execute_script('''window.open("http://bings.com","_blank");''')
     driver.switch_to.window(driver.window_handles[1])
     driver.get("https://www.emailnator.com/")
