@@ -32,26 +32,18 @@ driver.set_window_size(1920, 1080)
 low_word = "abcdefghijklkmnopqrstuvwxyz"
 driver.execute_script('''window.open("http://bings.com","_blank");''')
 driver.switch_to.window(driver.window_handles[1])
-driver.get("https://www.emailnator.com/")
+driver.get("https://mail.tm/en/")
 time.sleep(6)
 try:
-    driver.find_element(By.XPATH, '//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]').click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/button[3]").click()
 except:
     pass
-time.sleep(0.5)
-try:
-    driver.find_element(By.XPATH, '//*[@id="close-btn-ann"]').click()
-except:
-    pass
-time.sleep(1.5)
-driver.find_element(By.XPATH, '//*[@id="custom-switch-domain"]').click()
-time.sleep(0.5)
-driver.find_element(By.XPATH, '//*[@id="custom-switch-dotGmail"]').click()
-time.sleep(0.5)
-driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[5]/div/button').click()
 time.sleep(2)
-emil = driver.find_element(By.XPATH, '/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[1]/input').get_attribute("value")
-emil = emil.split("+")[0]+"+"+"".join(random.sample(low_word, 13))+"@gmail.com"
+driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[2]/div[5]/button").click()
+time.sleep(6)
+emil = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div/input").get_attribute("value")
+
+time.sleep(6)
 time.sleep(1)
 driver.switch_to.window(driver.window_handles[0])
 # random.choice(a)+"+"+emailrepl+"@gmail.com"
@@ -64,19 +56,17 @@ time.sleep(2)
 driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div[2]/div/div/div/input').send_keys(emil)
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/button").click()
-time.sleep(90)
+time.sleep(30)
 
 
 driver.switch_to.window(driver.window_handles[1])
 time.sleep(2)
-driver.get("https://www.emailnator.com/inbox/"+emil)
-# driver.find_element(By.XPATH, "/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[3]/button").click()
-time.sleep(6)
-linkzxd = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div[2]/div[2]/div/table/tbody/tr[2]/td/a").get_attribute("href")
-time.sleep(0.5)
-driver.get(linkzxd)
-time.sleep(7)
-verifylink = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div/div[2]/div/div/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
+driver.get(driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/main/div/div[2]/ul/li/a").get_attribute("href"))
+time.sleep(4)
+iframe = driver.find_element_by_xpath("/html/body/div[2]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
+driver.switch_to.frame(iframe)
+verifylink = driver.find_element(By.XPATH, "/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
+driver.switch_to.default_content()
 driver.switch_to.window(driver.window_handles[0])
 time.sleep(1)
 driver.get(verifylink)
