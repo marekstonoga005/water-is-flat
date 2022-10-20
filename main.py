@@ -4,6 +4,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import random
+import requests
 print("aaa")
 time.sleep(5)
 os.system("rm -rf rawrz")
@@ -30,22 +31,16 @@ options.add_argument("--remote-debugging-port=38223")
 driver = uc.Chrome(options=options, version_main=106)  # version_main allows to specify your chrome version instead of following chrome global version
 driver.set_window_size(1920, 1080)
 low_word = "abcdefghijklkmnopqrstuvwxyz"
-driver.execute_script('''window.open("http://bings.com","_blank");''')
-driver.switch_to.window(driver.window_handles[1])
-driver.get("https://mail.tm/en/")
-time.sleep(6)
-try:
-    driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[2]/div/button[3]").click()
-except:
-    pass
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[2]/div[5]/button").click()
-time.sleep(6)
-emil = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div/input").get_attribute("value")
 
-time.sleep(6)
-time.sleep(1)
-driver.switch_to.window(driver.window_handles[0])
+headersdomain = {'accept': 'application/ld+json'}
+responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
+emil = "".join(random.sample(low_word, 13))+"@"+responsedomain.json()["hydra:member"][0]["domain"]
+myobj = {'address': emil,"password": "cloud"}
+headersreg = {'accept': 'application/ld+json'}
+responsereg = requests.post('https://api.mail.tm/accounts', headers=headersreg, json=myobj)
+
+
+
 # random.choice(a)+"+"+emailrepl+"@gmail.com"
 print(emil)
 
@@ -59,16 +54,20 @@ driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div/div[2]/butto
 time.sleep(30)
 
 
-driver.switch_to.window(driver.window_handles[1])
-time.sleep(2)
-driver.get(driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/main/div/div[2]/ul/li/a").get_attribute("href"))
-time.sleep(4)
-iframe = driver.find_element_by_xpath("/html/body/div[2]/div/div/div[2]/main/div/div[3]/div[2]/div/iframe")
-driver.switch_to.frame(iframe)
-verifylink = driver.find_element(By.XPATH, "/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/a").get_attribute("href")
-driver.switch_to.default_content()
-driver.switch_to.window(driver.window_handles[0])
-time.sleep(1)
+myobjlog = {'address': emil,"password": "cloud"}
+headerslog = {'accept': 'application/ld+json'}
+responselog = requests.post('https://api.mail.tm/token', headers=headerslog, json=myobjlog)
+token = responselog.json()["token"]
+headersmess = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
+responsemess = requests.get('https://api.mail.tm/messages', headers=headersmess)
+headersmessz = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
+responsemessz = requests.get('https://api.mail.tm/messages/'+responsemess.json()["hydra:member"][0]["id"], headers=headersmess)
+verifylink = responsemessz.json()["text"].split("\n")[11].replace("|  [Sign in now](", "")+responsemessz.json()["text"].split("\n")[12]+responsemessz.json()["text"].split("\n")[13].replace(")", "")
+
+
+
+
+
 driver.get(verifylink)
 time.sleep(0.5)
 time.sleep(3)
