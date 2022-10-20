@@ -118,3 +118,5 @@ driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[3]/div[1
 time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[3]/div[1]/div/div/div[2]/button").click()
 time.sleep(12)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[3]/div/div/div/div[1]/div[1]/div/div/div[2]").click()
+time.sleep(30)
