@@ -108,7 +108,7 @@ def uwu():
         driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div[2]/div/div[2]/div[2]/a").click()
         time.sleep(3)
         driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[2]/form/div[3]/button").click()
-        input("x")
+        time.sleep(5)
     # except:
     #     pass
     #     uwu() /html/body/div[1]/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[1]/div[4]/div[2]/div[2]/label/input
