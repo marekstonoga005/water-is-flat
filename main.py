@@ -28,7 +28,7 @@ options.add_argument('--no-first-run --no-service-autorun --password-store=basic
 options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
-driver = uc.Chrome(options=options, version_main=107)
+driver = uc.Chrome(options=options, version_main=106)
 headersdomain = {'accept': 'application/ld+json'}
 responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
 emil = "".join(random.sample(low_word, 13))+"@"+responsedomain.json()["hydra:member"][0]["domain"]
