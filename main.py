@@ -42,7 +42,7 @@ time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div/form/span[2]/input").send_keys("".join(random.sample(low_word, 13))+"H1!")
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div/form/button").click()
-time.slepe(20)
+time.sleep(20)
 myobjlog = {'address': emil,"password": "cloud"}
 headerslog = {'accept': 'application/ld+json'}
 responselog = requests.post('https://api.mail.tm/token', headers=headerslog, json=myobjlog)
