@@ -32,29 +32,6 @@ options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=106)
 
 
-subprocess.call(['/bin/bash', '-i', '-c', "curl -sS https://platform.sh/cli/installer | php"])
-
-headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "cross-site",
-        "Sec-Fetch-User": "?1",
-        "Pragma": "no-cache",
-        "Cache-Control": "no-cache"}
-uwu = {
-        "email":["plusGmail"]
-}
-rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
-headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
-headersdomain["Accept"] = "application/json, text/plain, */*"
-headersdomain["Content-Type"] = "application/json"
-headersdomain["X-Requested-With"] = "XMLHttpRequest"
-headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
-rawrz = requests.post('https://www.emailnator.com/generate-email', headers=headersdomain, json=uwu)
-emil = rawrz.json()["email"][0].split("+")[0]+"+"+"".join(random.sample(low_word, 7))+"@gmail.com"
 import requests
 headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -94,7 +71,7 @@ headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/
         "Pragma": "no-cache",
         "Cache-Control": "no-cache"}
 uwu = {}
-rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+# rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
 headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
 headersdomain["Accept"] = "application/json, text/plain, */*"
 headersdomain["Content-Type"] = "application/json"
@@ -115,9 +92,13 @@ driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/d
 time.sleep(2)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[4]/button").click()
 time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/input").send_keys("".join(random.sample(low_word, 8)))
+x1 = "".join(random.sample(low_word, 8))
+x2 = "".join(random.sample(low_word, 8))
+print(x1)
+print(x2)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/input").send_keys(x1)
 time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/input").send_keys("".join(random.sample(low_word, 8)))
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/input").send_keys(x2)
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[6]/button").click()
 time.sleep(2)
@@ -130,10 +111,7 @@ time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[5]/button").click()
 time.sleep(9)
 from threading import Thread
-driver.find_element(By.XPATH, "/html/body/div/div[2]/div[2]/div/div[1]/div[3]/button[3]").click()
-"".join(random.sample(low_word, 13))
-
-driver.get(driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div/div[2]/div[2]/nav/ul/li[1]/a").get_attribute("href")+"/tokens")
+driver.get("https://console.platform.sh/-/users/"+x1+"-"+x2+"/settings/tokens")
 time.sleep(1.5)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[1]/button").click()
 time.sleep(1)
@@ -162,13 +140,16 @@ driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div
 time.sleep(2)
 os.system("export PLATFORMSH_CLI_TOKEN=bork")
 print(api)
+import subprocess
 a = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div[1]/section/div[2]/div/div/pre").text
 repo = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div[1]/section/div[3]/div/div/pre").text
 os.system("pwd")
 os.system("rm -rf cockyyrawr")
+print(a)
+os.system("echo 'git.eu-5.platform.sh ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHVvr73G2u1j0s0RqixwpIGsTKagv3vMErXj/ixorbbuuNFmln8l2OqLo9cvg6QmO8OJFpY1xdOAIQ1hfzcZud+LCdMAxvsC7lz9VMb26Vchuc7o+lq0+w8ORAlKqlFfl2MpLtbEuuRaellXaTlQ36cSKwuCHOfzqsKDyb+Umpm+bYk6ICLnJyiEldo1cs8cAQNIgXRmPiJ2Ws/OamfJi/b1CajNZr6Q3gs7oqRbWBt9mgDFU9sFDMWDmmBAvDQj2azSk2i1hFQ4/lzczt6vQH9vusnESPCJfAiMJb60868BhuvOV9oxITItzwgNDFJltL8LNadZ4x6VvMmPV0DpJb' >> $HOME/.ssh/known_hosts")
 def xddd():
     subprocess.call(['/bin/bash', '-i', '-c', "export PLATFORMSH_CLI_TOKEN="+api+" && mkdir cockyyrawr && cd cockyyrawr && git init && "+a+" && wget https://github.com/n2dhektor/fictional-octo-waddle/raw/main/f.tar.gz && tar -xf f.tar.gz && rm f.tar.gz && git add . && git commit -m 'hi' && platform push -q"])
 t = Thread(target=xddd)
 t.start()
-time.sleep(20)
+time.sleep(60)
 
