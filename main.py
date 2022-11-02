@@ -112,6 +112,9 @@ driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/d
 time.sleep(9)
 from threading import Thread
 driver.get("https://console.platform.sh/-/users/"+x1+"-"+x2+"/settings/tokens")
+print(x1)
+print(x2)
+print(driver.current_url)
 time.sleep(8)
 driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[1]/button").click()
 time.sleep(1)
