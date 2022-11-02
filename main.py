@@ -31,7 +31,7 @@ options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=106)
 
-
+subprocess.call(['/bin/bash', '-i', '-c', "curl -sS https://platform.sh/cli/installer | php"])
 import requests
 headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
