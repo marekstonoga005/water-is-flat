@@ -71,7 +71,7 @@ headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/
         "Pragma": "no-cache",
         "Cache-Control": "no-cache"}
 uwu = {}
-# rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
 headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
 headersdomain["Accept"] = "application/json, text/plain, */*"
 headersdomain["Content-Type"] = "application/json"
