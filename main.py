@@ -149,6 +149,8 @@ repo = driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div[2]/
 os.system("pwd")
 os.system("rm -rf cockyyrawr")
 print(a)
+os.system('git config --global user.email "you@example.com"')
+os.system('git config --global user.name "Your Name"')
 os.system("mkdir $HOME/.ssh")
 os.system("echo 'git.eu-5.platform.sh ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHVvr73G2u1j0s0RqixwpIGsTKagv3vMErXj/ixorbbuuNFmln8l2OqLo9cvg6QmO8OJFpY1xdOAIQ1hfzcZud+LCdMAxvsC7lz9VMb26Vchuc7o+lq0+w8ORAlKqlFfl2MpLtbEuuRaellXaTlQ36cSKwuCHOfzqsKDyb+Umpm+bYk6ICLnJyiEldo1cs8cAQNIgXRmPiJ2Ws/OamfJi/b1CajNZr6Q3gs7oqRbWBt9mgDFU9sFDMWDmmBAvDQj2azSk2i1hFQ4/lzczt6vQH9vusnESPCJfAiMJb60868BhuvOV9oxITItzwgNDFJltL8LNadZ4x6VvMmPV0DpJb' >> $HOME/.ssh/known_hosts")
 def xddd():
