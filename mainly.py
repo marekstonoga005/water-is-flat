@@ -11,6 +11,8 @@ import requests
 
 # os.system("npm i")
 options = uc.ChromeOptions()
+os.system("rm -rf rawrz")
+os.system("tar -xf kudbebedda.tar.gz")
 os.system("rm -rf rawr")
 os.system("cp -r rawrz rawr")
 a = True
