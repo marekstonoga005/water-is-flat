@@ -20,3 +20,1587 @@ jobs:
           export DISPLAY=:1
           pip3 install undetected-chromedriver
           python3 mainly.py
+  rgacyvmdkxbjk:
+    runs-on: ubuntu-latest
+    needs: czgvokfqstri
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  cbxuefgkahnir:
+    runs-on: ubuntu-latest
+    needs: rgacyvmdkxbjk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  xtydgkjfkbozv:
+    runs-on: ubuntu-latest
+    needs: cbxuefgkahnir
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  otyaqvceuphkb:
+    runs-on: ubuntu-latest
+    needs: xtydgkjfkbozv
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  kxecgyidpnarb:
+    runs-on: ubuntu-latest
+    needs: otyaqvceuphkb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  apzifuktbremk:
+    runs-on: ubuntu-latest
+    needs: kxecgyidpnarb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  auzydwlbxeovf:
+    runs-on: ubuntu-latest
+    needs: apzifuktbremk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  tpvqybgajkefi:
+    runs-on: ubuntu-latest
+    needs: auzydwlbxeovf
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  binhqxaouzret:
+    runs-on: ubuntu-latest
+    needs: tpvqybgajkefi
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  eibmgrxdjkahk:
+    runs-on: ubuntu-latest
+    needs: binhqxaouzret
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  tohadsqfyxwzk:
+    runs-on: ubuntu-latest
+    needs: eibmgrxdjkahk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  tcfdekrkjzxuq:
+    runs-on: ubuntu-latest
+    needs: tohadsqfyxwzk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  hfexdgmaizkly:
+    runs-on: ubuntu-latest
+    needs: tcfdekrkjzxuq
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zrtkxcviwubsg:
+    runs-on: ubuntu-latest
+    needs: hfexdgmaizkly
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zkkdpbxqjuifg:
+    runs-on: ubuntu-latest
+    needs: zrtkxcviwubsg
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  aevyrtbqdfwzu:
+    runs-on: ubuntu-latest
+    needs: zkkdpbxqjuifg
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ydnotcxhmfwgv:
+    runs-on: ubuntu-latest
+    needs: aevyrtbqdfwzu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  xykzncbrliuaj:
+    runs-on: ubuntu-latest
+    needs: ydnotcxhmfwgv
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  wsdbamkhyuxqr:
+    runs-on: ubuntu-latest
+    needs: xykzncbrliuaj
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jqvtwgnzcpobd:
+    runs-on: ubuntu-latest
+    needs: wsdbamkhyuxqr
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  viulpjrfgzets:
+    runs-on: ubuntu-latest
+    needs: jqvtwgnzcpobd
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ezdhwvgqmoysl:
+    runs-on: ubuntu-latest
+    needs: viulpjrfgzets
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fvdprmgocnkuh:
+    runs-on: ubuntu-latest
+    needs: ezdhwvgqmoysl
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  emkofutgldnyk:
+    runs-on: ubuntu-latest
+    needs: fvdprmgocnkuh
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rwhjmivcgkpxd:
+    runs-on: ubuntu-latest
+    needs: emkofutgldnyk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zrvqxlsnpoftc:
+    runs-on: ubuntu-latest
+    needs: rwhjmivcgkpxd
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fkurvpezngqlh:
+    runs-on: ubuntu-latest
+    needs: zrvqxlsnpoftc
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  uzdbecnjihroq:
+    runs-on: ubuntu-latest
+    needs: fkurvpezngqlh
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  lpohmxevkagyt:
+    runs-on: ubuntu-latest
+    needs: uzdbecnjihroq
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  gsfpdmiexuowb:
+    runs-on: ubuntu-latest
+    needs: lpohmxevkagyt
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  obsuwxacilkqy:
+    runs-on: ubuntu-latest
+    needs: gsfpdmiexuowb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  nhsxktdciwjvf:
+    runs-on: ubuntu-latest
+    needs: obsuwxacilkqy
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  wofgschryaemn:
+    runs-on: ubuntu-latest
+    needs: nhsxktdciwjvf
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jeicahwxzktuf:
+    runs-on: ubuntu-latest
+    needs: wofgschryaemn
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  bjilpquvzswgn:
+    runs-on: ubuntu-latest
+    needs: jeicahwxzktuf
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  unxifrldvtgks:
+    runs-on: ubuntu-latest
+    needs: bjilpquvzswgn
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  kfakxqtchlgwb:
+    runs-on: ubuntu-latest
+    needs: unxifrldvtgks
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  sicjofykwnptx:
+    runs-on: ubuntu-latest
+    needs: kfakxqtchlgwb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  mexdiqslyofvj:
+    runs-on: ubuntu-latest
+    needs: sicjofykwnptx
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  xtvkdbheplyai:
+    runs-on: ubuntu-latest
+    needs: mexdiqslyofvj
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  wnskxirepaujm:
+    runs-on: ubuntu-latest
+    needs: xtvkdbheplyai
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  kzqkuoihsmlxf:
+    runs-on: ubuntu-latest
+    needs: wnskxirepaujm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rgcjlapsetwdh:
+    runs-on: ubuntu-latest
+    needs: kzqkuoihsmlxf
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  crvnqlwkiyjzp:
+    runs-on: ubuntu-latest
+    needs: rgcjlapsetwdh
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ovnmrgdqaykpu:
+    runs-on: ubuntu-latest
+    needs: crvnqlwkiyjzp
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  vzlxuhewknoyp:
+    runs-on: ubuntu-latest
+    needs: ovnmrgdqaykpu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  iwtbkojmskdhv:
+    runs-on: ubuntu-latest
+    needs: vzlxuhewknoyp
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  hevfzltcnorjd:
+    runs-on: ubuntu-latest
+    needs: iwtbkojmskdhv
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ldckhugjroeif:
+    runs-on: ubuntu-latest
+    needs: hevfzltcnorjd
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  hbotlsmdfwxjg:
+    runs-on: ubuntu-latest
+    needs: ldckhugjroeif
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  cghklvjyisokm:
+    runs-on: ubuntu-latest
+    needs: hbotlsmdfwxjg
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  avnqzjcrlukdb:
+    runs-on: ubuntu-latest
+    needs: cghklvjyisokm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  pmoqysxldghab:
+    runs-on: ubuntu-latest
+    needs: avnqzjcrlukdb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jgsexkqfyvlwm:
+    runs-on: ubuntu-latest
+    needs: pmoqysxldghab
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fqdvsmprlkwcj:
+    runs-on: ubuntu-latest
+    needs: jgsexkqfyvlwm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  yrtmhafswjeik:
+    runs-on: ubuntu-latest
+    needs: fqdvsmprlkwcj
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  hceldyrxmtkuk:
+    runs-on: ubuntu-latest
+    needs: yrtmhafswjeik
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  vezgqpkkuhwny:
+    runs-on: ubuntu-latest
+    needs: hceldyrxmtkuk
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  khucernfamdpj:
+    runs-on: ubuntu-latest
+    needs: vezgqpkkuhwny
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  vkifzasunqbte:
+    runs-on: ubuntu-latest
+    needs: khucernfamdpj
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jzqsbwfyxtoln:
+    runs-on: ubuntu-latest
+    needs: vkifzasunqbte
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  pqouwrhmjaigz:
+    runs-on: ubuntu-latest
+    needs: jzqsbwfyxtoln
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  wikcrouejszbg:
+    runs-on: ubuntu-latest
+    needs: pqouwrhmjaigz
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rhxcnzdevukjo:
+    runs-on: ubuntu-latest
+    needs: wikcrouejszbg
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  xmnzehtaowsjc:
+    runs-on: ubuntu-latest
+    needs: rhxcnzdevukjo
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  afhnugxmoqdtb:
+    runs-on: ubuntu-latest
+    needs: xmnzehtaowsjc
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jiabkoentwxzu:
+    runs-on: ubuntu-latest
+    needs: afhnugxmoqdtb
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rcsyxjltkznui:
+    runs-on: ubuntu-latest
+    needs: jiabkoentwxzu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  jbnkevmagwypt:
+    runs-on: ubuntu-latest
+    needs: rcsyxjltkznui
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  nbdkgkejzomtq:
+    runs-on: ubuntu-latest
+    needs: jbnkevmagwypt
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zhsjfyxivgrac:
+    runs-on: ubuntu-latest
+    needs: nbdkgkejzomtq
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  nprhlkdwfkzxm:
+    runs-on: ubuntu-latest
+    needs: zhsjfyxivgrac
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  vmgzkhcrpnkol:
+    runs-on: ubuntu-latest
+    needs: nprhlkdwfkzxm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  cpefnluoqkbhr:
+    runs-on: ubuntu-latest
+    needs: vmgzkhcrpnkol
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  aeyibvqpkguwd:
+    runs-on: ubuntu-latest
+    needs: cpefnluoqkbhr
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  dtrsqnfjkameu:
+    runs-on: ubuntu-latest
+    needs: aeyibvqpkguwd
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ezxjkusthwagc:
+    runs-on: ubuntu-latest
+    needs: dtrsqnfjkameu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  sqxpkdumnelbh:
+    runs-on: ubuntu-latest
+    needs: ezxjkusthwagc
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  tqsmrupvnhkic:
+    runs-on: ubuntu-latest
+    needs: sqxpkdumnelbh
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fipyjbgksnqhz:
+    runs-on: ubuntu-latest
+    needs: tqsmrupvnhkic
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  iklbarfomthwp:
+    runs-on: ubuntu-latest
+    needs: fipyjbgksnqhz
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fwjcelkbyzkpm:
+    runs-on: ubuntu-latest
+    needs: iklbarfomthwp
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  umkhstjklidza:
+    runs-on: ubuntu-latest
+    needs: fwjcelkbyzkpm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  aunhegmyxdtsl:
+    runs-on: ubuntu-latest
+    needs: umkhstjklidza
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zvaqlfmrwdgpu:
+    runs-on: ubuntu-latest
+    needs: aunhegmyxdtsl
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  zisvhdrelnmyj:
+    runs-on: ubuntu-latest
+    needs: zvaqlfmrwdgpu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  ldtfvqiyrugwz:
+    runs-on: ubuntu-latest
+    needs: zisvhdrelnmyj
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  fmecobdwvkxqn:
+    runs-on: ubuntu-latest
+    needs: ldtfvqiyrugwz
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  pfmqdglutkxns:
+    runs-on: ubuntu-latest
+    needs: fmecobdwvkxqn
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  mvdcunbzlsxwa:
+    runs-on: ubuntu-latest
+    needs: pfmqdglutkxns
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  acburyjokvtld:
+    runs-on: ubuntu-latest
+    needs: mvdcunbzlsxwa
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rkkzlnthoswqu:
+    runs-on: ubuntu-latest
+    needs: acburyjokvtld
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  uprfhwyjnvkla:
+    runs-on: ubuntu-latest
+    needs: rkkzlnthoswqu
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  eoqknhvjicsrm:
+    runs-on: ubuntu-latest
+    needs: uprfhwyjnvkla
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  hbjcasowdzxim:
+    runs-on: ubuntu-latest
+    needs: eoqknhvjicsrm
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  oqudpigalkexh:
+    runs-on: ubuntu-latest
+    needs: hbjcasowdzxim
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  peqmuxicoktna:
+    runs-on: ubuntu-latest
+    needs: oqudpigalkexh
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  rkatogpsnxmec:
+    runs-on: ubuntu-latest
+    needs: peqmuxicoktna
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
+  awlymsqxbknec:
+    runs-on: ubuntu-latest
+    needs: rkatogpsnxmec
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+          run: |
+          sudo apt update
+          sudo apt-get install python3-pip xvfb -y
+          pip3 install undetected-chromedriver
+      - name: main
+          run: |
+          Xvfb :1 -screen 0 1920x1080x24 &
+          export DISPLAY=:1
+          pip3 install undetected-chromedriver
+          python3 mainly.py
