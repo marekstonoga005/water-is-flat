@@ -30,6 +30,8 @@ options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=107)
+driver.get("https://nopecha.com/setup#l4w9szh46c")
+time.sleep(2)
 driver.get("https://huggingface.co/join")
 headersdomain = {'accept': 'application/ld+json'}
 responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
