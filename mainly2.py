@@ -30,7 +30,7 @@ options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 options.add_argument("--remote-debugging-port=38223")
-driver = uc.Chrome(options=options, version_main=105)
+driver = uc.Chrome(options=options, version_main=107)
 
 driver.set_window_size(1920, 1080)
 passwd = "".join(random.sample(low_word, 12))+"H!1"
