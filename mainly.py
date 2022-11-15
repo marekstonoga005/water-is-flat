@@ -125,6 +125,8 @@ def xddddddz():
         driver.switch_to.default_content()
         driver.close()
     except: 
+        driver.close()
+        time.sleep(95)
         xddddddz()
         pass
 xddddddz()
