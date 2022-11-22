@@ -20,6 +20,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import random
 import requests
 options = uc.ChromeOptions()
+os.system("rm -rf rawrz")
+os.system("tar -xf kudbebedda.tar.gz")
 os.system("rm -rf rawr")
 os.system("cp -r rawrz rawr")
 a = True
