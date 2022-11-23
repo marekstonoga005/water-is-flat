@@ -42,8 +42,9 @@ options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537
 driver = uc.Chrome(options=options, version_main=107) 
 # driver.execute_script('window.open("http://bings.com","_blank");')
 # driver.switch_to.window(driver.window_handles[0])
+#make acount
 driver.get("https://nopecha.com/setup#rvl1i0jtry")
-time.sleep(0.21)
+time.sleep(1)
 driver.get("https://nopecha.com/setup#rvl1i0jtry")
 time.sleep(0.21)
 driver.get("https://nopecha.com/setup#rvl1i0jtry")
@@ -103,7 +104,6 @@ def get_message():
                     return verifylink.split("verify your email address")[1].split("This link")[0].replace('</p><p><a href="', '').replace('" rel="nofollow">Link to e-mail address verification</a></p><p>', "")
 
 
-
 low_word = "abcdefghijklkmnopqrstuvwxyz"
 upper_word = "ABDCEFGHIJKLMNOPQRSTUVWXYZ"
 number = "1234567890"
@@ -121,10 +121,14 @@ time.sleep(3)
 
 driver.get("https://my.appcircle.io/")
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div/div[2]/div[1]/div[3]/form/ul/li[2]/a").click() #click sign in
+hrefx = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[1]/div[3]/form/ul/li[2]/a").get_attribute("href")
+time.sleep(3)
 
+driver.get(hrefx)
 
+time.sleep(1)
 driver.find_element(By.XPATH,'//*[@id="email"]').send_keys(email) #input email
+time.sleep(1)
 driver.find_element(By.XPATH,'//*[@id="password"]').send_keys(passwd) #input password
 driver.find_element(By.XPATH,'//*[@id="password-confirm"]').send_keys(passwd) #input password2
 
@@ -142,37 +146,32 @@ if captcha == "true":
     time.sleep(4)
     driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/form/div[3]/div/button").click() #click sign in
 
-time.sleep(40)
+time.sleep(30)
 print(get_message())
 driver.get(get_message())
 time.sleep(1)
 driver.get("https://my.appcircle.io/build?modal=/build/modal/NewProfileDialog")
-time.sleep(1)
+time.sleep(3)
 driver.find_element(By.XPATH,'/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[1]/div[2]/input').send_keys(usenrame) #input profilname
+time.sleep(2)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/select").click() #click sellect device
 time.sleep(1)
-# driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/select").click() #click sellect device
-# time.sleep(1)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/select/option[3]").click() #click sellect device
-time.sleep(1)
+time.sleep(3)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/form/footer/button").click() #click save
-time.sleep(1)
+time.sleep(2)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[3]/div[3]/div/div[1]/div[2]/div/div/div/div/div/div[1]/div").click() #click repo
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div/div[2]/div[3]/div[1]/div[2]/div/div/div/div/div/div[2]/div/div[6]/div[2]/div").click()
-time.sleep(2)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div/div[1]/div[2]/div/div/div/div/div[1]/div[1]/div/input").send_keys("https://github.com/uwuboiz/scaling-robot")
-time.sleep(0.5)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/footer/button").click()
-
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div/div[2]/div[3]/div[1]/div[2]/div/div/div/div/div/div[2]/div/div[7]").click() #click select repo import
 time.sleep(4)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[2]").click() #click workflow
 time.sleep(1)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div/div[1]/div[3]").click() #click push workflow
-time.sleep(2)
+time.sleep(1)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div/div/div[3]/div").click() #click custom script
 time.sleep(1)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div[6]/div/div[2]/div/select/option[2]").click() #select bash
-time.sleep(1)
+time.sleep(2)
 
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div/div[7]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[1]/div[4]/div[1]").click()
 time.sleep(1)
@@ -196,27 +195,40 @@ driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/di
 time.sleep(60)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click()
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[3]").click()
-time.sleep(1.5)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[2]").click()
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[2]/div[3]/div[3]/div[4]/div[1]/div[2]/div/div/div/div/div/div/div[7]/button").click()
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[1]/input").send_keys("main")
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div").click()
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/footer/button").click()
+time.sleep(45)
+
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click() #git
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[3]").click() #git
+time.sleep(1.5)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[2]").click() #git
+time.sleep(1)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[1]/input").send_keys("main") #git
 time.sleep(0.76)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/input").click()
-time.sleep(0.76)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div").click()
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/input").click() #git
+time.sleep(3)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/div").click() #git ale wait wiekszy
 time.sleep(0.76)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[3]/div[2]/input").click()
+time.sleep(3) #git
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/div/div/ul/li[1]").click() #git ale wiekszy wait
 time.sleep(0.76)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/div/div/ul/li[1]").click()
-time.sleep(0.76)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/footer/button").click()
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div[2]/form/footer/button").click() #gites
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click()
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[1]/div[2]").click() #git
 time.sleep(1)
-driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[1]/section/div[1]/a").click()
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[4]/div[2]/main/div/div/div/div[1]/div[2]/section/div[1]/section/div[1]/a").click() #git
 time.sleep(2)
 uwu = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/div/div/div[4]/div/input").get_attribute("value")
 uwuz = "linkzy="+uwu
 print(uwu)
 rawrz = requests.post('https://api.idots.cf/uwu', data=uwu, headers={"Content-Type": "application/x-www-form-urlencoded"})
+time.sleep(2)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[3]/div/div/div/div[2]/div/footer/button").click() #git
