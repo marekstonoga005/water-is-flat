@@ -142,7 +142,7 @@ if captcha == "true":
     time.sleep(4)
     driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/form/div[3]/div/button").click() #click sign in
 
-time.sleep(40)
+time.sleep(50)
 print(get_message())
 driver.get(get_message())
 time.sleep(1)
