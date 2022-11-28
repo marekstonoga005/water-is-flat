@@ -47,6 +47,7 @@ def clickcookie():
         pass
 
 def stats():
+  time.sleep(1)
   try:
     if(driver.find_element(By.XPATH,'//*[@id="title"]/h1/yt-formatted-string')):
       print("Title: "+driver.find_element(By.XPATH,'//*[@id="title"]/h1/yt-formatted-string').text)
@@ -57,7 +58,12 @@ def stats():
 def time_video():
   try:
     if(driver.find_element(By.CLASS_NAME,'ytp-time-current')):
-      print("Watch Time: "+driver.find_element(By.CLASS_NAME,'ytp-time-current').text)
+      if not (driver.find_element(By.CLASS_NAME,'ytp-time-current').text):
+        time_video()
+        time.sleep(1)
+      else:
+        stats()
+        print("Watch Time: "+driver.find_element(By.CLASS_NAME,'ytp-time-current').text)
   except:
     pass
 
@@ -75,7 +81,6 @@ playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
-stats()
 time.sleep(response["time"])
 time_video()
 #
@@ -84,7 +89,6 @@ playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
-stats()
 time.sleep(response["time"])
 time_video()
 #
@@ -93,7 +97,6 @@ playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
-stats()
 time.sleep(response["time"])
 time_video()
 #
@@ -102,7 +105,6 @@ playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
-stats()
 time.sleep(response["time"])
 time_video()
 #
@@ -111,7 +113,6 @@ playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
-stats()
 time.sleep(response["time"])
 time_video()
 driver.close()
