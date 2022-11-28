@@ -82,7 +82,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-time_video()
+
 #
 print("---------- 2 ----------")
 playvideo()
@@ -90,7 +90,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-time_video()
+
 #
 print("---------- 3 ----------")
 playvideo()
@@ -98,7 +98,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-time_video()
+
 #
 print("---------- 4 ----------")
 playvideo()
@@ -106,7 +106,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-time_video()
+
 #
 print("---------- 5 ----------")
 playvideo()
