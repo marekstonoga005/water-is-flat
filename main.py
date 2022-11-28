@@ -46,6 +46,21 @@ def clickcookie():
     except:
         pass
 
+def stats():
+  try:
+    if(driver.find_element(By.XPATH,'//*[@id="title"]/h1/yt-formatted-string')):
+      print("Title: "+driver.find_element(By.XPATH,'//*[@id="title"]/h1/yt-formatted-string').text)
+      print("Like: "+driver.find_element(By.XPATH,'//*[@id="segmented-like-button"]/ytd-toggle-button-renderer/yt-button-shape/button/div[2]/span').text)
+  except:
+    pass
+
+def time_video():
+  try:
+    if(driver.find_element(By.CLASS_NAME,'ytp-time-current')):
+      print("Watch Time: "+driver.find_element(By.CLASS_NAME,'ytp-time-current').text)
+  except:
+    pass
+
 playvideo()
 time.sleep(1)
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
@@ -54,46 +69,44 @@ driver.get(response["url"])
 time.sleep(5)
 clickcookie()
 time.sleep(response["time"])
-
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
+stats()
 time.sleep(response["time"])
-
+time_video()
+#
 playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
+stats()
 time.sleep(response["time"])
-
+time_video()
+#
 playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
+stats()
 time.sleep(response["time"])
-
+time_video()
+#
 playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
+stats()
 time.sleep(response["time"])
-
+time_video()
+#
 playvideo()
 rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
+stats()
 time.sleep(response["time"])
-
-playvideo()
-rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
-response = rsp.json()
-driver.get(response["url"])
-time.sleep(response["time"])
-
-playvideo()
-rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
-response = rsp.json()
-driver.get(response["url"])
-time.sleep(response["time"])
+time_video()
 driver.close()
