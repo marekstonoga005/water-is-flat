@@ -75,7 +75,7 @@ def time_video():
                             pass
                         stats()
                         print("Watch Time: "+time_video)
-                        print("Response Time:"+response["url"])
+                        print("Url: "+response["url"])
                 else:
                     status = False
                     try:
@@ -84,7 +84,7 @@ def time_video():
                         pass
                     stats()
                     print("Watch Time: "+time_video)
-                    print("Response Time:"+response["url"])
+                    print("Url: "+response["url"])
         except:
             print("Watch Time: can not find video frame")
             status = False
