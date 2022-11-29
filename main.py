@@ -56,16 +56,35 @@ def stats():
     pass
 
 def time_video():
-  try:
-    if(driver.find_element(By.CLASS_NAME,'ytp-time-current')):
-      if not (driver.find_element(By.CLASS_NAME,'ytp-time-current').text):
-        time_video()
-        time.sleep(1)
-      else:
-        stats()
-        print("Watch Time: "+driver.find_element(By.CLASS_NAME,'ytp-time-current').text)
-  except:
-    pass
+    time_test = 0
+    status = True
+    time_video = "error"
+    while status:
+        try:
+            if(driver.find_element(By.CLASS_NAME,'ytp-time-current')):
+                if not (driver.find_element(By.CLASS_NAME,'ytp-time-current').text):
+                    time_test = time_test + 1
+                    time.sleep(1)
+                    if time_test <= 60:
+                        sus = "amogus"
+                    else:
+                        status = False
+                        try:
+                            time_video = driver.find_element(By.CLASS_NAME,'ytp-time-current').text
+                        except:
+                            pass
+                        print("Watch Time: "+time_video)
+                else:
+                    status = False
+                    try:
+                        time_video = driver.find_element(By.CLASS_NAME,'ytp-time-current').text
+                    except:
+                        pass
+                    print("Watch Time: "+time_video)
+        except:
+            print("Watch Time: can not find video frame")
+            status = False
+            pass
 
 playvideo()
 time.sleep(1)
@@ -82,7 +101,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-
+time_video()
 #
 print("---------- 2 ----------")
 playvideo()
@@ -90,7 +109,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-
+time_video()
 #
 print("---------- 3 ----------")
 playvideo()
@@ -98,7 +117,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-
+time_video()
 #
 print("---------- 4 ----------")
 playvideo()
@@ -106,7 +125,7 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
-
+time_video()
 #
 print("---------- 5 ----------")
 playvideo()
@@ -114,4 +133,5 @@ rsp = requests.get('https://bluezczatu.hckrteam.com/link', headers = headers)
 response = rsp.json()
 driver.get(response["url"])
 time.sleep(response["time"])
+time_video()
 driver.close()
