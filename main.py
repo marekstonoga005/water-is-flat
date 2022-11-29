@@ -73,6 +73,7 @@ def time_video():
                             time_video = driver.find_element(By.CLASS_NAME,'ytp-time-current').text
                         except:
                             pass
+                        stats()
                         print("Watch Time: "+time_video)
                         print("Response Time:"+response["url"])
                 else:
@@ -81,6 +82,7 @@ def time_video():
                         time_video = driver.find_element(By.CLASS_NAME,'ytp-time-current').text
                     except:
                         pass
+                    stats()
                     print("Watch Time: "+time_video)
                     print("Response Time:"+response["url"])
         except:
