@@ -1,5 +1,8 @@
+node = "G1"
+
+node = "Node-"+node
+print("Starting: "+node)
 import os
-print("rawr")
 import undetected_chromedriver as uc
 import time
 from selenium.webdriver.common.by import By
@@ -30,7 +33,7 @@ options.user_data_dir = "rawr"
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--user-data-dir=rawr')
 driver = uc.Chrome(options=options, version_main=107)
-headers = {'Authorization': 'e54a4490de5045589e0c98283821c783'}
+headers = {'Authorization': 'e54a4490de5045589e0c98283821c783','User-agent': node}
 time.sleep(5)
 def playvideo():
     try:
